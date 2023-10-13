@@ -1,0 +1,8 @@
+.button {
+    background-color: transparent;
+    display: block;
+}
+
+.button:hover {
+    cursor: pointer;
+}

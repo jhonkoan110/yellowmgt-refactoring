@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--poppins);
+}
+
+html {
+    font-size: 10px;
+}
+
+html,
+body,
+#root {
+    height: 100%;
+}
+
+:root {
+    /* Dimensions */
+    --app-width: 1280px;
+    --mobile-app-width: 390px;
+
+    /* Colors */
+
+    /* Fonts */
+    --poppins: Poppins, sans-serif;
+    --barracuda: Barracuda, sans-serif;
+}
+
+#root {
+    min-width: var(--app-width);
+}
+
+img {
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+@media screen and (max-width: 390px) {
+    #root {
+        min-width: var(--mobile-app-width);
+    }
+}

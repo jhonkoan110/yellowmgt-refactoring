@@ -1,0 +1,11 @@
+@font-face {
+    font-family: Poppins;
+    src: url('../../public/fonts/poppins/Poppins-Regular.ttf');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: Barracuda;
+    src: url('../../public/fonts/barracuda/Barracuda-regular.ttf');
+    font-weight: 400;
+}

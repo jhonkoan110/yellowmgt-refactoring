@@ -1,0 +1,11 @@
+.content {
+    margin: 0 auto;
+    width: var(--app-width);
+}
+
+@media screen and (max-width: 390px) {
+    .content {
+        width: auto;
+        padding: 0 1.6rem;
+    }
+}
