@@ -1,0 +1,53 @@
+.root {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr var(--app-width) 1fr;
+    align-items: center;
+    margin-top: 15rem;
+    margin-bottom: 5rem;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 70px auto 1fr;
+    align-items: center;
+}
+
+.anchor {
+    display: block;
+    height: 23px;
+    width: 100%;
+    position: absolute;
+    top: -50%;
+    background: red;
+}
+
+.title {
+    font-weight: 400;
+    margin: 0 4rem;
+    font-family: var(--barracuda);
+    font-size: 54px;
+    line-height: normal;
+    width: fit-content;
+    text-transform: uppercase;
+    white-space: nowrap;
+    overflow-wrap: normal;
+}
+
+@media screen and (max-width: 390px) {
+    .root {
+        display: flex;
+        margin-top: 8rem;
+        margin-bottom: 4rem;
+    }
+
+    .container {
+        display: flex;
+        justify-content: center;
+    }
+
+    .title {
+        font-size: 4rem;
+        margin: 0 2rem;
+    }
+}

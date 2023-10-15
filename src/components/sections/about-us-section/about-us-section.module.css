@@ -1,0 +1,18 @@
+.content-container {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 400;
+    line-height: 2.4rem;
+    font-size: 1.6rem;
+}
+
+.content-container__text-block {
+    max-width: 510px;
+}
+
+@media screen and (max-width: 390px) {
+    .content-container {
+        flex-direction: column;
+        gap: 4rem;
+    }
+}

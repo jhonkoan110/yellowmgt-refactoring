@@ -1,16 +1,28 @@
 import React from 'react';
+import { Routes, Route } from 'react-router-dom';
 
 import { AppHeader } from 'components/app-header/app-header';
-import { MainInfoSection } from 'components/sections/main-info-section';
+import { AppFooter } from 'components/app-footer';
+import { MainPage } from 'pages/main-page';
+import { CasesPage } from 'pages/cases-page';
+import { ConcreteCasePage } from 'pages/concrete-case-page/concrete-case-page';
 
 export const App = () => {
     return (
         <>
-            <AppHeader />
+            <div>
+                <AppHeader />
 
-            <main>
-                <MainInfoSection />
-            </main>
+                <main>
+                    <Routes>
+                        <Route path="/" element={<MainPage />} />
+                        <Route path="/cases" element={<CasesPage />} />
+                        <Route path="/cases/:id" element={<ConcreteCasePage />} />
+                    </Routes>
+                </main>
+            </div>
+
+            <AppFooter />
         </>
     );
 };

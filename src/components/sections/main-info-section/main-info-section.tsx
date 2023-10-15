@@ -1,12 +1,13 @@
 import React from 'react';
 
+import { Button } from 'components/button';
 import { Content } from 'components/content';
 import imageTextSrc from 'assets/image-icon.svg';
 import mattersALotTheseDaysSrc from 'assets/matters-a-lot-these-days-icon.svg';
 import arrowIconSrc from 'assets/arrow-icon.svg';
 
 import styles from './main-info-section.module.css';
-import { Button } from 'components/button';
+import { NavLink } from 'react-router-dom';
 
 export const MainInfoSection = () => {
     return (
@@ -25,10 +26,12 @@ export const MainInfoSection = () => {
                             blogs, and other platforms. Our professional strategy helps establish industry leadership
                             and reach target audiences.
                         </p>
-                        <Button className={styles['cases-btn']}>
-                            <span>Cases</span>
-                            <img src={arrowIconSrc} alt="arrow-icon" />
-                        </Button>
+                        <NavLink to="/cases">
+                            <Button className={styles['cases-btn']}>
+                                <span>Cases</span>
+                                <img src={arrowIconSrc} alt="arrow-icon" />
+                            </Button>
+                        </NavLink>
                     </div>
                 </div>
             </Content>

@@ -1,0 +1,37 @@
+.root {
+    /* position: absolute; */
+    /* position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1280px 1fr;
+    height: 100%;
+    width: 100%; */
+    /* height: 100%; */
+    height: max-content;
+    position: relative;
+}
+
+.root::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: url('../../assets/background.jpg') repeat-y center center scroll;
+    filter: blur(60px);
+    background-color: red;
+    z-index: -1;
+    height: 100%;
+    width: 1280px;
+}
+
+.app-background {
+    height: 100%;
+    /* position: absolute; */
+    /* background-image: url('../../assets/background.jpg'); */
+    /* filter: blur(40px); */
+    /* min-height: auto; */
+    /* background-size: contain; */
+    /* /* height: 100%; */
+    /* width: 100%; */
+    /* z-index: -1; */
+}

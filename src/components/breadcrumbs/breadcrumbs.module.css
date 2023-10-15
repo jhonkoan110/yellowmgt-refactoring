@@ -1,0 +1,25 @@
+.breadcrumbs {
+    margin: 6rem 0;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: var(--poppins);
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.breadcrumbs a {
+    color: var(--grey-2);
+}
+
+.breadcrumbs .active {
+    color: black;
+}
+
+@media screen and (max-width: 390px) {
+    .breadcrumbs {
+        margin: 4rem 0;
+    }
+}

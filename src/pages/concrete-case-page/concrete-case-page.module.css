@@ -1,0 +1,52 @@
+.concrete-case-page__title {
+    margin-top: 5rem;
+    font-size: 5.4rem;
+    text-transform: uppercase;
+    font-family: var(--barracuda);
+    color: #282828;
+    font-weight: 400;
+}
+
+.concrete-case-page__addition {
+    margin-top: 1rem;
+    font-family: var(--barracuda);
+    text-transform: uppercase;
+    line-height: 2.6rem;
+    font-size: 2rem;
+}
+
+.concrete-case-page__gallery {
+    margin-top: 5rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    column-gap: 4rem;
+    row-gap: 3rem;
+}
+
+.concrete-case-page__gallery__item {
+    width: 620px;
+}
+
+.concrete-case-page__gallery__image {
+    width: 620px;
+}
+
+.concrete-case-page__gallery__text {
+    margin-top: 1.5rem;
+}
+
+@media screen and (max-width: 390px) {
+    .concrete-case-page__gallery {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .concrete-case-page__gallery__item {
+        width: 100%;
+    }
+
+    .concrete-case-page__gallery__image {
+        width: 100%;
+    }
+}

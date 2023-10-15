@@ -1,0 +1,119 @@
+.cases-list-item {
+    padding: 3rem 0;
+    border-top: 1px solid #282828;
+    animation: fade 0.2s linear;
+}
+
+.cases-list-item:last-of-type {
+    border-bottom: 1px solid #282828;
+}
+
+.cases-list-item__content-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cases-list-item__image-container {
+    width: 620px;
+    height: 350px;
+    background-color: #757575;
+    animation: fade 0.2s linear;
+}
+
+.cases-list-item__info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.cases-list-item__info_expanded {
+    width: 620px;
+}
+
+.cases-list-item__title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: var(--barracuda);
+    font-size: 2rem;
+    line-height: 2.6rem;
+    text-transform: uppercase;
+    color: #282828;
+    font-weight: 400;
+}
+
+.cases-list-item__service {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+}
+
+.cases-list-item__arrow-btn {
+    display: block;
+    line-height: 0.9rem;
+    width: 30%;
+    text-align: right;
+}
+
+.cases-list-item__arrow-btn:hover {
+    cursor: pointer;
+}
+
+.cases-list-item__arrow-btn_none {
+    display: none;
+}
+
+@media screen and (max-width: 390px) {
+    .cases-list-item__content-container {
+        flex-direction: column;
+    }
+
+    .cases-list-item__info_expanded {
+        width: auto;
+    }
+
+    .cases-list-item__title_expanded {
+        margin-top: 3rem;
+    }
+
+    .cases-list-item__service {
+        margin-top: 1rem;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .cases-list-item__image-container {
+        width: 100%;
+        height: auto;
+    }
+
+    .cases-list-item__image {
+        width: 358px;
+    }
+
+    .cases-list-item__arrow-btn {
+        width: fit-content;
+    }
+
+    .cases-list-item__arrow-btn_none {
+        display: block;
+    }
+
+    .none {
+        display: none;
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+        /* height: 0; */
+        max-height: 0;
+    }
+    to {
+        opacity: 1;
+        height: fit-content;
+        /* height: 300px; */
+        max-height: 378px;
+    }
+}

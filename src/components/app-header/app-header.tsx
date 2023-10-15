@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
 import cn from 'classnames';
 
-import desktopLogo from 'assets/desktop-logo.svg';
-import burgerIcon from 'assets/burger-icon.svg';
-import { navLinks } from 'constants/nav-links';
+import appLogo from 'assets/desktop-logo.svg';
 import { Content } from 'components/content';
+import { Button } from 'components/button';
+import { HashLink } from 'react-router-hash-link';
+import { NavLink } from 'react-router-dom';
 
 import styles from './app-header.module.css';
-import { Button } from 'components/button';
+import { scrollToTop } from 'utils/scrollToTop';
 
 export const AppHeader = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -20,12 +21,20 @@ export const AppHeader = () => {
         <header className={styles['app-header']}>
             <Content>
                 <div className={styles['header-inner']}>
-                    <img className={styles['mobile-logo']} src={desktopLogo} alt="yellowmgt-logo" />
+                    <NavLink to="/" onClick={scrollToTop}>
+                        <img className={styles['mobile-logo']} src={appLogo} alt="yellowmgt-logo" />
+                    </NavLink>
                     <nav>
                         <ul className={styles['nav-list']}>
-                            {navLinks.map((link) => (
-                                <li key={link.name}>{link.name}</li>
-                            ))}
+                            <HashLink to="/#about">
+                                <li>about us</li>
+                            </HashLink>
+                            <HashLink to="/#our_services">
+                                <li>our services</li>
+                            </HashLink>
+                            <NavLink to="/cases" onClick={scrollToTop}>
+                                <li>cases</li>
+                            </NavLink>
                         </ul>
                     </nav>
                     <Button

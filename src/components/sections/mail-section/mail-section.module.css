@@ -1,0 +1,39 @@
+.mail-section {
+    margin-top: 15rem;
+}
+
+.mail-section__content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5rem;
+}
+
+.mail-section__heading {
+    font-family: var(--barracuda);
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+    font-size: 5.4rem;
+}
+
+.mail-section__mail {
+    background-color: #fde170;
+    text-transform: uppercase;
+    border: 1px solid black;
+    padding: 2rem 2.4rem;
+    width: 249px;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    text-align: center;
+}
+
+@media screen and (max-width: 390px) {
+    .mail-section__heading {
+        font-size: 4rem;
+    }
+
+    .mail-section__mail {
+        width: 100%;
+    }
+}

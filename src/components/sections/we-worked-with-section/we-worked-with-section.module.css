@@ -1,0 +1,83 @@
+.content-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    column-gap: 10rem;
+    row-gap: 2rem;
+    align-items: center;
+}
+
+.igg {
+    width: 151px;
+}
+
+.nintendo {
+    width: 240px;
+}
+
+.masomo {
+    width: 254px;
+}
+
+.match-group {
+    width: 150px;
+}
+
+.nutaku {
+    width: 232px;
+}
+
+.oasis-games {
+    width: 144px;
+}
+
+.wildlife {
+    width: 199px;
+}
+
+.tencent-games {
+    width: 248px;
+}
+
+@media screen and (max-width: 390px) {
+    .content-container {
+        /* flex-direction: column; */
+        align-items: center;
+        justify-content: space-evenly;
+        /* gap: 5rem; */
+        column-gap: 5rem;
+        row-gap: 1.5rem;
+    }
+
+    .igg {
+        width: 91px;
+    }
+
+    .nintendo {
+        width: 143px;
+    }
+
+    .masomo {
+        width: 90px;
+    }
+
+    .match-group {
+        width: 152px;
+    }
+
+    .nutaku {
+        width: 139px;
+    }
+
+    .oasis-games {
+        width: 85px;
+    }
+
+    .wildlife {
+        width: 119px;
+    }
+
+    .tencent-games {
+        width: 149px;
+    }
+}

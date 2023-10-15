@@ -7,6 +7,7 @@
 
 html {
     font-size: 10px;
+    scroll-behavior: smooth;
 }
 
 html,
@@ -15,12 +16,48 @@ body,
     height: 100%;
 }
 
+#root {
+    min-height: 100vh;
+}
+
+body {
+    background-color: #fffdf2;
+    position: relative;
+    height: max-content;
+    min-height: 100vh;
+
+    /* background-image: url('./assets/background.jpg'); */
+    /* background-size: 1280px 100%; */
+    /* background-size: contain; */
+    /* background-repeat: repeat-y; */
+    /* background-position: 100%; */
+    /* background-origin: border-box; */
+    /* height: 100%; */
+    /* width: 100%; */
+    /* width: 1280px; */
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: url('./assets/background-2.jpg') repeat-y center center scroll;
+    filter: blur(60px);
+    z-index: -1;
+    height: 100%;
+    width: 1280px;
+}
+
 :root {
     /* Dimensions */
     --app-width: 1280px;
     --mobile-app-width: 390px;
+    /* --mobile-app-width: 425px; */
 
     /* Colors */
+    --grey-2: #4f4f4f;
 
     /* Fonts */
     --poppins: Poppins, sans-serif;
@@ -29,6 +66,9 @@ body,
 
 #root {
     min-width: var(--app-width);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 img {
@@ -41,6 +81,11 @@ a {
 }
 
 @media screen and (max-width: 390px) {
+    body::before {
+        width: 390px;
+        /* background-size: cover; */
+    }
+
     #root {
         min-width: var(--mobile-app-width);
     }
