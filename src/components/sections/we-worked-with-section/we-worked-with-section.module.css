@@ -7,6 +7,15 @@
     align-items: center;
 }
 
+.content-container img {
+    transition: all 0.1s ease-in-out;
+    filter: grayscale(100%);
+}
+
+.content-container img:hover {
+    filter: grayscale(0%);
+}
+
 .igg {
     width: 151px;
 }
@@ -16,11 +25,11 @@
 }
 
 .masomo {
-    width: 254px;
+    width: 150px;
 }
 
 .match-group {
-    width: 150px;
+    width: 250px;
 }
 
 .nutaku {
@@ -39,7 +48,7 @@
     width: 248px;
 }
 
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 426px) {
     .content-container {
         /* flex-direction: column; */
         align-items: center;

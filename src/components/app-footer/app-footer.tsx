@@ -6,6 +6,7 @@ import appLogo from 'assets/desktop-logo.svg';
 import { HashLink } from 'react-router-hash-link';
 
 import styles from './app-footer.module.css';
+import { scrollToTop } from 'utils/scrollToTop';
 
 export const AppFooter = () => {
     return (
@@ -16,7 +17,9 @@ export const AppFooter = () => {
                     <HashLink to="/#our_services">our services</HashLink>
                     <NavLink to="/cases">cases</NavLink>
                 </ul>
-                <img className={styles['mobile-logo']} src={appLogo} alt="yellowmgt-logo" />
+                <NavLink to="/" onClick={scrollToTop}>
+                    <img className={styles['mobile-logo']} src={appLogo} alt="yellowmgt-logo" />
+                </NavLink>
                 <small className={styles['app-footer__copyrights']}>YELLOWMGT &copy; 2023 All rights reserved</small>
             </Content>
         </footer>

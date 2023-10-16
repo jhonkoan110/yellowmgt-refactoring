@@ -13,6 +13,7 @@ import wildlifeLogo from 'assets/wildlife-logo.webp';
 import tencentGamesLogo from 'assets/tencent-games-logo.png';
 
 import styles from './we-worked-with-section.module.css';
+import { NavLink } from 'react-router-dom';
 
 export const WeWorkedWithSection = () => {
     return (
@@ -20,14 +21,30 @@ export const WeWorkedWithSection = () => {
             <SectionTitle title="we worked with" />
 
             <Content className={styles['content-container']}>
-                <img className={styles.igg} src={iggLogo} />
-                <img className={styles.nintendo} src={nintendoLogo} />
-                <img className={styles['match-group']} src={mgLogo} />
-                <img className={styles.masomo} src={masogoLogo} />
-                <img className={styles.nutaku} src={nutakuLogo} />
-                <img className={styles['oasis-games']} src={oasisGamesLogo} />
-                <img className={styles.wildlife} src={wildlifeLogo} />
-                <img className={styles['tencent-games']} src={tencentGamesLogo} />
+                <NavLink to="https://www.igg.com/" target="_blank">
+                    <img className={styles.igg} src={iggLogo} />
+                </NavLink>
+                <NavLink to="https://www.nintendo.com/us/" target="_blank">
+                    <img className={styles.nintendo} src={nintendoLogo} />
+                </NavLink>
+                <NavLink to="https://mtch.com/" target="_blank">
+                    <img className={styles['match-group']} src={mgLogo} />
+                </NavLink>
+                <NavLink to="https://www.masomo.com/" target="_blank">
+                    <img className={styles.masomo} src={masogoLogo} />
+                </NavLink>
+                <NavLink to="https://www.nutaku.net/" target="_blank">
+                    <img className={styles.nutaku} src={nutakuLogo} />
+                </NavLink>
+                <NavLink to="https://oasgames.com/wap/en/home.html" target="_blank">
+                    <img className={styles['oasis-games']} src={oasisGamesLogo} />
+                </NavLink>
+                <NavLink to="https://wildlifestudios.com/games/" target="_blank">
+                    <img className={styles.wildlife} src={wildlifeLogo} />
+                </NavLink>
+                <NavLink to="https://www.tencentgames.com/" target="_blank">
+                    <img className={styles['tencent-games']} src={tencentGamesLogo} />
+                </NavLink>
             </Content>
         </section>
     );

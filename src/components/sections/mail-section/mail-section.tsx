@@ -9,7 +9,7 @@ export const MailSection = () => {
         <section className={styles['mail-section']}>
             <Content className={styles['mail-section__content-container']}>
                 <h2 className={styles['mail-section__heading']}>we build projects</h2>
-                <div className={styles['mail-section__mail']}>nikita@yellowmgt.com</div>
+                <div className={styles['mail-section__mail']}>info@yellowmgt.com</div>
                 <h2 className={styles['mail-section__heading']}>that users love</h2>
             </Content>
         </section>

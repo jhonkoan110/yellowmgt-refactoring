@@ -26,7 +26,7 @@ export const MainInfoSection = () => {
                             blogs, and other platforms. Our professional strategy helps establish industry leadership
                             and reach target audiences.
                         </p>
-                        <NavLink to="/cases">
+                        <NavLink to="/cases" >
                             <Button className={styles['cases-btn']}>
                                 <span>Cases</span>
                                 <img src={arrowIconSrc} alt="arrow-icon" />

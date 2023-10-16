@@ -6,9 +6,9 @@ import { ArrowIcon } from 'components/arrow-icon';
 
 import styles from './cases-section-item.module.css';
 
-import tmpImageSrc from 'assets/igg-lords-mobile-1.jpg';
+import { CasesSectionItemProps } from './cases-section-item.types';
 
-export const CasesSectionItem = () => {
+export const CasesSectionItem = ({ imageSrc, title, addition }: CasesSectionItemProps) => {
     const [expanded, setExpanded] = useState(false);
 
     const handleClickArrowButton = () => {
@@ -20,7 +20,7 @@ export const CasesSectionItem = () => {
             <Content className={styles['cases-list-item__content-container']}>
                 {expanded && (
                     <div className={styles['cases-list-item__image-container']}>
-                        <img className={styles['cases-list-item__image']} src={tmpImageSrc} alt="asdasd" />
+                        <img className={styles['cases-list-item__image']} src={imageSrc} alt={`${title} image`} />
                     </div>
                 )}
                 <div
@@ -31,7 +31,7 @@ export const CasesSectionItem = () => {
                         className={cn(styles['cases-list-item__title'], {
                             [styles['cases-list-item__title_expanded']]: expanded,
                         })}>
-                        <span>PUBG MOBILE ｜COSMOBOY - Егор Крид</span>
+                        <span>{title}</span>
                         <button
                             className={cn(styles['cases-list-item__arrow-btn'], {
                                 [styles['none']]: expanded,
@@ -42,7 +42,7 @@ export const CasesSectionItem = () => {
                     </h4>
                     {expanded && (
                         <p className={styles['cases-list-item__service']}>
-                            <span>360° Campaign Development</span>
+                            <span>{addition}</span>
                             <button
                                 className={cn(
                                     styles['cases-list-item__arrow-btn'],

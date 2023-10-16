@@ -21,20 +21,11 @@ body,
 }
 
 body {
-    background-color: #fffdf2;
+    background-color: var(--app-background);
     position: relative;
     height: max-content;
     min-height: 100vh;
-
-    /* background-image: url('./assets/background.jpg'); */
-    /* background-size: 1280px 100%; */
-    /* background-size: contain; */
-    /* background-repeat: repeat-y; */
-    /* background-position: 100%; */
-    /* background-origin: border-box; */
-    /* height: 100%; */
-    /* width: 100%; */
-    /* width: 1280px; */
+    overflow-y: scroll;
 }
 
 body::before {
@@ -43,7 +34,8 @@ body::before {
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    background: url('./assets/background-2.jpg') repeat-y center center scroll;
+    background: url('./assets/background-2.jpg') repeat-y scroll;
+    background-size: contain;
     filter: blur(60px);
     z-index: -1;
     height: 100%;
@@ -57,7 +49,9 @@ body::before {
     /* --mobile-app-width: 425px; */
 
     /* Colors */
+    --app-background: #fffdf2;
     --grey-2: #4f4f4f;
+    --orange: #fde170;
 
     /* Fonts */
     --poppins: Poppins, sans-serif;
@@ -80,7 +74,7 @@ a {
     color: black;
 }
 
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 426px) {
     body::before {
         width: 390px;
         /* background-size: cover; */

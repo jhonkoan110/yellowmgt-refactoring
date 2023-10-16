@@ -30,9 +30,15 @@
     justify-content: space-between;
     align-items: center;
     width: 400px;
+    transition: all 0.1s linear;
 }
 
-@media screen and (max-width: 390px) {
+.cases-btn:hover {
+    cursor: pointer;
+    background-color: #fde170;
+}
+
+@media screen and (max-width: 426px) {
     .container {
         display: block;
     }
@@ -45,6 +51,10 @@
     .right-side {
         align-items: center;
         gap: 4rem;
+    }
+
+    .right-side a {
+        width: 100%;
     }
 
     .matters-a-lot-text {

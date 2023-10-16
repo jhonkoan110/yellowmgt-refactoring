@@ -10,6 +10,7 @@
     border: 1px solid black;
     width: 400px;
     margin-top: 3rem;
+    transition: all 0.1s ease-in-out;
 }
 
 .link button {
@@ -19,14 +20,15 @@
     text-transform: uppercase;
     font-size: 1.6rem;
     line-height: 2rem;
-    transition: all 0.2s ease-in-out;
+    text-align: center;
+    cursor: pointer;
 }
 
 .link:hover {
     background-color: #fde170;
 }
 
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 426px) {
     .link {
         width: 100%;
         margin-top: 4rem;

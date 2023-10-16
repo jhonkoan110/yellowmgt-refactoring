@@ -25,18 +25,25 @@
 }
 
 .concrete-case-page__gallery__item {
-    width: 620px;
 }
 
 .concrete-case-page__gallery__image {
     width: 620px;
+    background-color: lightgray;
+}
+
+.concrete-case-page__gallery__image_short-view {
+    width: 290px;
 }
 
 .concrete-case-page__gallery__text {
     margin-top: 1.5rem;
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
 }
 
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 426px) {
     .concrete-case-page__gallery {
         flex-direction: column;
         align-items: center;
@@ -48,5 +55,10 @@
 
     .concrete-case-page__gallery__image {
         width: 100%;
+    }
+
+    .concrete-case-page__gallery__image_short-view {
+        margin: 0 auto;
+        width: 290px;
     }
 }

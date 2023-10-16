@@ -1,0 +1,39 @@
+.animated-rect {
+    position: relative;
+    overflow: hidden;
+    width: 426px;
+    height: 240px;
+    /* animation: bubble 0.2s ease-in-out;   */
+}
+
+.animated-rect:hover {
+    cursor: pointer;
+    z-index: 1;
+}
+
+.animated-rect::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 120%;
+    height: 100%;
+    background-color: var(--orange);
+    transform: translate(-111%, 0%) skew(-25deg);
+    transition: all 0.3s ease-in-out;
+    will-change: transform;
+}
+
+.animated-rect:hover.animated-rect::before {
+    transform: translate(-10%, 0%) skew(-15deg);
+}
+
+@media screen and (max-width: 425px) {
+    .animated-rect {
+        width: 100%;
+    }
+
+    .animated-rect::before {
+        transform: translate(-113%, 0%) skew(-25deg);
+    }
+}
