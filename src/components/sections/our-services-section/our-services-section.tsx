@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Content } from 'components/content';
 import { SectionTitle } from 'components/section-title';
-import doneIconSrc from '/public/assets/done-icon.svg';
+import doneIconSrc from 'assets/done-icon.svg';
 import { ourServicesData } from './our-services.constants';
 
 import styles from './our-services-section.module.css';

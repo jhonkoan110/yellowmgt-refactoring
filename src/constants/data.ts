@@ -1,46 +1,46 @@
-import iggLordsMobile1 from '/public/assets/cases/igg-lords-mobile-1.jpg';
-import iggLordsMobile2 from '/public/assets/cases/igg-lords-mobile-2.jpg';
+import iggLordsMobile1 from 'assets/cases/igg-lords-mobile-1.jpg';
+import iggLordsMobile2 from 'assets/cases/igg-lords-mobile-2.jpg';
 
-import iggTimePrincess1 from '/public/assets/cases/igg-time-princess-1.jpg';
-import iggTimePrincess2 from '/public/assets/cases/igg-time-princess-2.jpg';
-import iggTimePrincess3 from '/public/assets/cases/igg-time-princess-3.jpg';
-import iggTimePrincess4 from '/public/assets/cases/igg-time-princess-4.jpg';
+import iggTimePrincess1 from 'assets/cases/igg-time-princess-1.jpg';
+import iggTimePrincess2 from 'assets/cases/igg-time-princess-2.jpg';
+import iggTimePrincess3 from 'assets/cases/igg-time-princess-3.jpg';
+import iggTimePrincess4 from 'assets/cases/igg-time-princess-4.jpg';
 
-import iggCosplay1 from '/public/assets/cases/igg-cosplay-1.jpg';
-import iggCosplay2 from '/public/assets/cases/igg-cosplay-2.jpg';
+import iggCosplay1 from 'assets/cases/igg-cosplay-1.jpg';
+import iggCosplay2 from 'assets/cases/igg-cosplay-2.jpg';
 
-import wildlifeZooba1 from '/public/assets/cases/wildlife-zooba-1.jpg';
-import wildlifeZooba2 from '/public/assets/cases/wildlife-zooba-2.jpg';
-import wildlifeZooba3 from '/public/assets/cases/wildlife-zooba-3.jpg';
+import wildlifeZooba1 from 'assets/cases/wildlife-zooba-1.jpg';
+import wildlifeZooba2 from 'assets/cases/wildlife-zooba-2.jpg';
+import wildlifeZooba3 from 'assets/cases/wildlife-zooba-3.jpg';
 
-import matchGroupAblo1 from '/public/assets/cases/match-group-ablo-1.jpg';
-import matchGroupAblo2 from '/public/assets/cases/match-group-ablo-2.jpg';
-import matchGroupAblo3 from '/public/assets/cases/match-group-ablo-3.jpg';
-import matchGroupAblo4 from '/public/assets/cases/match-group-ablo-4.jpg';
-import matchGroupAblo5 from '/public/assets/cases/match-group-ablo-5.jpg';
-import matchGroupAblo6 from '/public/assets/cases/match-group-ablo-6.jpg';
-import matchGroupAblo7 from '/public/assets/cases/match-group-ablo-7.jpg';
-import matchGroupAblo8 from '/public/assets/cases/match-group-ablo-8.jpg';
-import matchGroupAblo9 from '/public/assets/cases/match-group-ablo-9.jpg';
-import matchGroupAblo10 from '/public/assets/cases/match-group-ablo-10.jpg';
-import matchGroupAblo11 from '/public/assets/cases/match-group-ablo-11.jpg';
+import matchGroupAblo1 from 'assets/cases/match-group-ablo-1.jpg';
+import matchGroupAblo2 from 'assets/cases/match-group-ablo-2.jpg';
+import matchGroupAblo3 from 'assets/cases/match-group-ablo-3.jpg';
+import matchGroupAblo4 from 'assets/cases/match-group-ablo-4.jpg';
+import matchGroupAblo5 from 'assets/cases/match-group-ablo-5.jpg';
+import matchGroupAblo6 from 'assets/cases/match-group-ablo-6.jpg';
+import matchGroupAblo7 from 'assets/cases/match-group-ablo-7.jpg';
+import matchGroupAblo8 from 'assets/cases/match-group-ablo-8.jpg';
+import matchGroupAblo9 from 'assets/cases/match-group-ablo-9.jpg';
+import matchGroupAblo10 from 'assets/cases/match-group-ablo-10.jpg';
+import matchGroupAblo11 from 'assets/cases/match-group-ablo-11.jpg';
 
-import masomoBasketball1 from '/public/assets/cases/masomo-basketball-1.jpg';
+import masomoBasketball1 from 'assets/cases/masomo-basketball-1.jpg';
 
-import tencentPubgMobileSong1 from '/public/assets/cases/tencent-pubg-mobile-song-1.jpg';
+import tencentPubgMobileSong1 from 'assets/cases/tencent-pubg-mobile-song-1.jpg';
 
-import tencentPubgProLeague1 from '/public/assets/cases/tencent-pubg-pro-league-1.jpg';
-import tencentPubgProLeague2 from '/public/assets/cases/tencent-pubg-pro-league-2.jpg';
-import tencentPubgProLeague3 from '/public/assets/cases/tencent-pubg-pro-league-3.jpg';
+import tencentPubgProLeague1 from 'assets/cases/tencent-pubg-pro-league-1.jpg';
+import tencentPubgProLeague2 from 'assets/cases/tencent-pubg-pro-league-2.jpg';
+import tencentPubgProLeague3 from 'assets/cases/tencent-pubg-pro-league-3.jpg';
 
-import tencentMobileLeagueOfLegends1 from '/public/assets/cases/tencent-mobile-league-of-legends-1.jpg';
+import tencentMobileLeagueOfLegends1 from 'assets/cases/tencent-mobile-league-of-legends-1.jpg';
 
-import lordsMobileLogo from '/public/assets/lords-mobile-logo.png';
-import pubgMobileLogo from '/public/assets/pubg-mobile-logo.png';
-import basketballArenaLogo from '/public/assets/basketball-arena-logo.png';
-import abloLogo from '/public/assets/ablo-logo.png';
-import tennisClashLogo from '/public/assets/tennis-clash-logo.png';
-import timePrincessLogo from '/public/assets/time-princess-logo.png';
+import lordsMobileLogo from 'assets/lords-mobile-logo.png';
+import pubgMobileLogo from 'assets/pubg-mobile-logo.png';
+import basketballArenaLogo from 'assets/basketball-arena-logo.png';
+import abloLogo from 'assets/ablo-logo.png';
+import tennisClashLogo from 'assets/tennis-clash-logo.png';
+import timePrincessLogo from 'assets/time-princess-logo.png';
 
 export enum Companies {
     IGG = 'igg',
@@ -124,24 +124,6 @@ export const jData: Record<string, Tmp> = {
             },
         ],
     },
-    // 3: {
-    //     id: 3,
-    //     companyName: Companies.IGG,
-    //     title: 'Time Princess. Tik Tok',
-    //     addition: '360° Campaign Development',
-    //     cases: [
-    //         {
-    //             id: 1,
-    //             link: '/youtube',
-    //             imageSrc: '',
-    //         },
-    //         {
-    //             id: 2,
-    //             link: '/youtube',
-    //             imageSrc: '',
-    //         },
-    //     ],
-    // },
     time_princess_cosplay_instagram: {
         id: 'time_princess_cosplay_instagram',
         companyName: Companies.IGG,

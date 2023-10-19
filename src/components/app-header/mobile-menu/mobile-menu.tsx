@@ -1,11 +1,11 @@
 import React, { memo, useEffect } from 'react';
 import cn from 'classnames';
 
-import crossIconSrc from '/public/assets/cross-icon.svg';
+import crossIconSrc from 'assets/cross-icon.svg';
 
 import styles from './mobile-menu.module.css';
 import { MobileMenuProps } from './mobile-menu.types';
-import appLogoSrc from '/public/assets/desktop-logo.svg';
+import appLogoSrc from 'assets/desktop-logo.svg';
 import { Button } from 'components/button';
 import { HashLink } from 'react-router-hash-link';
 import { NavLink } from 'react-router-dom';

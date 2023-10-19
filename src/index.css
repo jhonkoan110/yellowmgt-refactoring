@@ -34,7 +34,7 @@ body::before {
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    background: url('../public/assets/background-2.jpg') repeat-y;
+    background: url('./assets/background-2.jpg') repeat-y;
     z-index: -1;
     height: 100%;
     width: 1280px;
@@ -58,11 +58,12 @@ body::before {
 }
 
 .app-loader {
+    position: fixed;
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100vh;
-    overflow-y: hidden;
+    width: 100vw;
 }
 
 #root {

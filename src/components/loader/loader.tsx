@@ -16,7 +16,7 @@ export const Loader = () => {
                     fill="#fde170"
                     stroke="#282828"
                 />
-                <circle className={cn(styles.spinner_qM83, styles.spinner_oXPr)} cx="20" cy="12" r="3" fill="#282828" />
+                <circle className={cn(styles.spinner_qM83, styles.spinner_ZTLf)} cx="20" cy="12" r="3" fill="#282828" />
             </svg>
         </div>
     );

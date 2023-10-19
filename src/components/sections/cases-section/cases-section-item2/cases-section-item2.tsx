@@ -2,6 +2,7 @@ import React from 'react';
 
 import styles from './cases-section-item2.module.css';
 import { NavLink } from 'react-router-dom';
+import { Image } from 'components/image';
 
 interface CasesSectionItemProps {
     imageSrc: string;
@@ -14,7 +15,7 @@ export const CasesSectionItem2 = ({ imageSrc, title, id }: CasesSectionItemProps
         <NavLink to={`/cases/${id}`} className={styles.navlink}>
             <li className={styles['cases-section-item']}>
                 <div style={{ height: 70, marginTop: 65 }}>
-                    <img src={imageSrc} width={80} />
+                    <Image src={imageSrc} width={80} />
                 </div>
                 <p>{title}</p>
                 <svg

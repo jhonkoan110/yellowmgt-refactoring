@@ -1,10 +1,11 @@
 import React from 'react';
 
 import { SectionTitle } from 'components/section-title';
-import strategyIconSrc from '/public/assets/strategy-icon.svg';
+import strategyIconSrc from 'assets/strategy-icon.svg';
 
 import styles from './about-us-section.module.css';
 import { Content } from 'components/content';
+import { Image } from 'components/image';
 
 export const AboutUsSection = () => {
     return (
@@ -27,7 +28,7 @@ export const AboutUsSection = () => {
                         </p>
                     </div>
 
-                    <img src={strategyIconSrc} alt="strategy-text" />
+                    <Image src={strategyIconSrc} alt="strategy-text" />
                 </div>
             </Content>
         </section>

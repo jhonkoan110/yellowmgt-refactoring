@@ -9,6 +9,7 @@ import { useScrollToTop } from 'hooks/useScrollToTop';
 import { useNavigate, useParams } from 'react-router-dom';
 import { jData } from 'constants/data';
 import { NavLink } from 'react-router-dom';
+import { Image } from 'components/image';
 
 interface Props {
     link?: string;
@@ -58,7 +59,7 @@ const ConcreteCasePage = () => {
                             [styles['concrete-case-page__gallery__image_short-view']]: caseItem.isShortView,
                         })}>
                         <ConditionalNavlink link={caseItem.link}>
-                            <img
+                            <Image
                                 className={cn(styles['concrete-case-page__gallery__image'], {
                                     [styles['concrete-case-page__gallery__image_short-view']]: caseItem.isShortView,
                                 })}

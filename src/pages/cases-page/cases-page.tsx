@@ -10,9 +10,9 @@ import { NavLink } from 'react-router-dom';
 import styles from './cases-page.module.css';
 import { AnimatedRect } from 'components/animated-rect';
 
-const addZero = (value: number) => {
-    return value < 10 ? `0${value}` : value;
-};
+// const addZero = (value: number) => {
+//     return value < 10 ? `0${value}` : value;
+// };
 
 const CasesPage = () => {
     useEffect(() => {
@@ -27,22 +27,36 @@ const CasesPage = () => {
                 {/* <AnimatedRect /> */}
 
                 <div className={styles['table-container']}>
-                    {ALL_CASES_2.map((item, index) => (
+                    {ALL_CASES_2.map((item) => (
                         <AnimatedRect key={item.id}>
                             <NavLink to={String(item.id)}>
                                 <div className={styles['table-container__item']}>
-                                    <div className={styles['table-container__item__top']}>
-                                        <div>
+                                    <div
+                                        style={{
+                                            display: 'flex',
+                                            flexDirection: 'column',
+                                            alignItems: 'center',
+                                            height: '100%',
+                                            // justifyContent: 'space-evenly',
+                                        }}>
+                                        <div style={{ height: 70, marginTop: 65 }}>
                                             <img
                                                 src={item.productLogo}
-                                                className={styles['table-container__item__image']}
+                                                width={80}
+                                                // height={50}
+                                                // className={styles['table-container__item__image']}
                                             />
-                                            <span className={styles['table-container__item__title']}>{item.title}</span>
                                         </div>
+
+                                        <span className={styles['table-container__item__title']} style={{ height: 52 }}>
+                                            {item.title}
+                                        </span>
+                                    </div>
+                                    {/* <div className={styles['table-container__item__top']}>
                                         <div className={styles['table-container__item__index-number']}>
                                             {addZero(index + 1)}
                                         </div>
-                                    </div>
+                                    </div> */}
                                     {/* <div className={styles['table-container__item__addition']}>{item.addition}</div> */}
                                     <button className={styles['table-container__item__btn']}>
                                         <ArrowIcon />

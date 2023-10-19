@@ -15,6 +15,7 @@ const MainPage = () => {
             <OurServicesSection />
             <CasesSection />
             <WeWorkedWithSection />
+            <MailSection />
         </>
     );
 };
