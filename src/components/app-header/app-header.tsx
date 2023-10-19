@@ -1,7 +1,7 @@
 import React, { useCallback, useState } from 'react';
 import cn from 'classnames';
 
-import appLogo from 'assets/desktop-logo.svg';
+import appLogo from '/public/assets/desktop-logo.svg';
 import { Content } from 'components/content';
 import { Button } from 'components/button';
 import { HashLink } from 'react-router-hash-link';
@@ -37,6 +37,9 @@ export const AppHeader = () => {
                                 </HashLink>
                                 <NavLink to="/cases" onClick={scrollToTop}>
                                     <li>cases</li>
+                                </NavLink>
+                                <NavLink to="/contact_us" onClick={scrollToTop}>
+                                    <li>contact us</li>
                                 </NavLink>
                             </ul>
                         </nav>

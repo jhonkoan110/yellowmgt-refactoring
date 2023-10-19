@@ -7,7 +7,7 @@ import { MainInfoSection } from 'components/sections/main-info-section';
 import { OurServicesSection } from 'components/sections/our-services-section';
 import { WeWorkedWithSection } from 'components/sections/we-worked-with-section';
 
-export const MainPage = () => {
+const MainPage = () => {
     return (
         <>
             <MainInfoSection />
@@ -19,3 +19,5 @@ export const MainPage = () => {
         </>
     );
 };
+
+export default MainPage;

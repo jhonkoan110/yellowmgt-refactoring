@@ -44,7 +44,8 @@
     }
 
     .image-text {
-        width: 354px;
+        /* width: 354px; */
+        width: 100%;
         margin: 4rem auto 0;
     }
 
@@ -58,7 +59,8 @@
     }
 
     .matters-a-lot-text {
-        width: 340px;
+        /* width: 340px; */
+        width: 100%;
         margin: 1rem auto 0;
     }
 

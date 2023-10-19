@@ -8,7 +8,7 @@ import styles from './cases-section-item.module.css';
 
 import { CasesSectionItemProps } from './cases-section-item.types';
 
-export const CasesSectionItem = ({ imageSrc, title, addition }: CasesSectionItemProps) => {
+export const CasesSectionItem = ({ title, addition }: CasesSectionItemProps) => {
     const [expanded, setExpanded] = useState(false);
 
     const handleClickArrowButton = () => {
@@ -20,7 +20,7 @@ export const CasesSectionItem = ({ imageSrc, title, addition }: CasesSectionItem
             <Content className={styles['cases-list-item__content-container']}>
                 {expanded && (
                     <div className={styles['cases-list-item__image-container']}>
-                        <img className={styles['cases-list-item__image']} src={imageSrc} alt={`${title} image`} />
+                        {/* <img className={styles['cases-list-item__image']} src={imageSrc} alt={`${title} image`} /> */}
                     </div>
                 )}
                 <div

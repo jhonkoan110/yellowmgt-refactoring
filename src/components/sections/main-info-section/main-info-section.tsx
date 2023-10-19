@@ -2,9 +2,9 @@ import React from 'react';
 
 import { Button } from 'components/button';
 import { Content } from 'components/content';
-import imageTextSrc from 'assets/image-icon.svg';
-import mattersALotTheseDaysSrc from 'assets/matters-a-lot-these-days-icon.svg';
-import arrowIconSrc from 'assets/arrow-icon.svg';
+import imageTextSrc from '/public/assets/image-icon.svg';
+import mattersALotTheseDaysSrc from '/public/assets/matters-a-lot-these-days-icon.svg';
+import arrowIconSrc from '/public/assets/arrow-icon.svg';
 
 import styles from './main-info-section.module.css';
 import { NavLink } from 'react-router-dom';

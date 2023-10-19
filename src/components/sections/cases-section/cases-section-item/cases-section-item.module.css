@@ -1,7 +1,7 @@
 .cases-list-item {
     padding: 3rem 0;
     border-top: 1px solid #282828;
-    animation: fade 0.2s linear;
+    /* animation: fade 0.2s linear; */
 }
 
 .cases-list-item:last-of-type {
@@ -17,7 +17,7 @@
     width: 620px;
     height: 350px;
     background-color: #757575;
-    animation: fade 0.2s linear;
+    /* animation: fade 0.2s linear; */
 }
 
 .cases-list-item__image {

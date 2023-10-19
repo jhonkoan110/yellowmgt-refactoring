@@ -1,5 +1,10 @@
 .cases-list {
     list-style: none;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    /* row-gap: 3rem; */
 }
 
 .link {
@@ -9,7 +14,7 @@
     padding: 2rem 2.4rem;
     border: 1px solid black;
     width: 400px;
-    margin-top: 3rem;
+    margin-top: 5rem;
     transition: all 0.1s ease-in-out;
 }
 

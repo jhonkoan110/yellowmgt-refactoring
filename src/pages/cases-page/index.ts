@@ -1,1 +1,1 @@
-export { CasesPage } from './cases-page';
+export { default } from './cases-page';

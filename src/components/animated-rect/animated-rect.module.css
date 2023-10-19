@@ -3,7 +3,6 @@
     overflow: hidden;
     width: 426px;
     height: 240px;
-    /* animation: bubble 0.2s ease-in-out;   */
 }
 
 .animated-rect:hover {
@@ -20,7 +19,7 @@
     height: 100%;
     background-color: var(--orange);
     transform: translate(-111%, 0%) skew(-25deg);
-    transition: all 0.3s ease-in-out;
+    transition: all 0.2s ease-in-out;
     will-change: transform;
 }
 
@@ -28,12 +27,12 @@
     transform: translate(-10%, 0%) skew(-15deg);
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 426px) {
     .animated-rect {
         width: 100%;
     }
 
     .animated-rect::before {
-        transform: translate(-113%, 0%) skew(-25deg);
+        display: none;
     }
 }

@@ -6,6 +6,10 @@ import { useLocation } from 'react-router-dom';
 
 import styles from './breadcrumbs.module.css';
 
+const normalizeCrumbText = (text: string) => {
+    return text.replaceAll('_', ' ');
+};
+
 export const Breadcrumbs = () => {
     const location = useLocation();
 
@@ -31,7 +35,7 @@ export const Breadcrumbs = () => {
                         onClick={handleClick(crumb)}
                         to={`/${crumb}`}
                         className={cn({ [styles.active]: index === crumbs.length - 1 })}>
-                        {crumb}
+                        {normalizeCrumbText(crumb)}
                     </NavLink>
                 </Fragment>
             ))}

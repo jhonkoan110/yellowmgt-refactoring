@@ -1,11 +1,11 @@
 import React, { memo, useEffect } from 'react';
 import cn from 'classnames';
 
-import crossIconSrc from 'assets/cross-icon.svg';
+import crossIconSrc from '/public/assets/cross-icon.svg';
 
 import styles from './mobile-menu.module.css';
 import { MobileMenuProps } from './mobile-menu.types';
-import appLogoSrc from 'assets/desktop-logo.svg';
+import appLogoSrc from '/public/assets/desktop-logo.svg';
 import { Button } from 'components/button';
 import { HashLink } from 'react-router-hash-link';
 import { NavLink } from 'react-router-dom';
@@ -45,6 +45,9 @@ export const MobileMenu = memo(({ visible, onClose }: MobileMenuProps) => {
                         </HashLink>
                         <NavLink to="/cases" onClick={onClose}>
                             <li className={styles['mobile-menu__nav-list__item']}>cases</li>
+                        </NavLink>
+                        <NavLink to="/contact_us" onClick={onClose}>
+                            <li className={styles['mobile-menu__nav-list__item']}>contact us</li>
                         </NavLink>
                     </ul>
                 </nav>

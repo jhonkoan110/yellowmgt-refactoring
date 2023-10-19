@@ -34,12 +34,11 @@ body::before {
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    background: url('./assets/background-2.jpg') repeat-y scroll;
-    background-size: contain;
-    filter: blur(60px);
+    background: url('./assets/background-2.jpg') repeat-y;
     z-index: -1;
     height: 100%;
     width: 1280px;
+    filter: blur(60px);
 }
 
 :root {

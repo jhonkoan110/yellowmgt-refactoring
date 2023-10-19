@@ -2,7 +2,6 @@ export const navLinks = [
     {
         name: 'about us',
         to: '#about',
-        
     },
     {
         name: 'our services',
@@ -11,5 +10,9 @@ export const navLinks = [
     {
         name: 'cases',
         to: '#cases',
+    },
+    {
+        name: 'contact us',
+        to: '/contact_us',
     },
 ];

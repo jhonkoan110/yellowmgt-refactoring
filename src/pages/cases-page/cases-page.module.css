@@ -12,10 +12,7 @@
     padding: 3rem;
     border-right: 1px solid black;
     border-bottom: 1px solid black;
-    /* box-shadow: -1px -1px 0 0 black, inset 1px 1px 0 0 black; */
-    /* width: calc((var(--app-width) + 2px) / 3); */
     height: 240px;
-    /* transition: all 0.2s ease-in-out; */
 }
 
 .table-container__item:hover {

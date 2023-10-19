@@ -1,0 +1,61 @@
+.navlink {
+    width: 37%;
+}
+
+.cases-section-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    /* width: 37%; */
+    background-color: #282828;
+    height: 250px;
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: var(--app-background);
+    transition: all 0.1s ease-in-out;
+    border: 1px solid #282828;
+}
+
+.cases-section-item:hover {
+    background-color: var(--orange);
+    color: #282828;
+    cursor: pointer;
+}
+
+.cases-section-item:hover .cases-section-item__arrow path {
+    transition: fill 0.1s linear;
+    fill: #282828;
+}
+
+.cases-section-item__arrow {
+    margin-top: 3rem;
+    margin-left: auto;
+    margin-right: 3rem;
+    margin-bottom: 3rem;
+    /* height: 20px;
+    width: 20px;
+    display: block; */
+}
+
+@media screen and (max-width: 426px) {
+    .navlink {
+        width: 100%;
+    }
+
+    .cases-section-item {
+        /* width: 100%; */
+        transition: none;
+    }
+
+    .cases-section-item:hover {
+        background-color: #282828;
+        color: var(--app-background);
+        cursor: default;
+    }
+
+    .cases-section-item:hover .cases-section-item__arrow path {
+        transition: none;
+        fill: var(--app-background);
+    }
+}

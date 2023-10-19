@@ -25,7 +25,7 @@ const ConditionalNavlink = ({ children, link }: Props) => {
     );
 };
 
-export const ConcreteCasePage = () => {
+const ConcreteCasePage = () => {
     useScrollToTop();
 
     const navigate = useNavigate();
@@ -53,6 +53,7 @@ export const ConcreteCasePage = () => {
             <section className={styles['concrete-case-page__gallery']}>
                 {data.cases.map((caseItem) => (
                     <div
+                        key={caseItem.id}
                         className={cn(styles['concrete-case-page__gallery__item'], {
                             [styles['concrete-case-page__gallery__image_short-view']]: caseItem.isShortView,
                         })}>
@@ -72,3 +73,5 @@ export const ConcreteCasePage = () => {
         </Content>
     );
 };
+
+export default ConcreteCasePage;

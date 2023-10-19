@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { SectionTitle } from 'components/section-title';
-import strategyIconSrc from 'assets/strategy-icon.svg';
+import strategyIconSrc from '/public/assets/strategy-icon.svg';
 
 import styles from './about-us-section.module.css';
 import { Content } from 'components/content';

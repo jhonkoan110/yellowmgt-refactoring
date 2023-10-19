@@ -1,1 +1,1 @@
-export { ConcreteCasePage } from './concrete-case-page';
+export { default } from './concrete-case-page';

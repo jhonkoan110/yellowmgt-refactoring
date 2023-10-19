@@ -48,6 +48,18 @@
     width: 248px;
 }
 
+.see-all-btn {
+    display: block;
+    margin: 3rem auto 0;
+    border: none;
+    text-decoration: underline;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    text-transform: uppercase;
+    background-color: transparent;
+    cursor: pointer;
+}
+
 @media screen and (max-width: 426px) {
     .content-container {
         /* flex-direction: column; */

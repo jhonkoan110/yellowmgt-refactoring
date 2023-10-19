@@ -14,7 +14,7 @@ const addZero = (value: number) => {
     return value < 10 ? `0${value}` : value;
 };
 
-export const CasesPage = () => {
+const CasesPage = () => {
     useEffect(() => {
         scrollToTop();
     }, []);
@@ -27,8 +27,8 @@ export const CasesPage = () => {
                 {/* <AnimatedRect /> */}
 
                 <div className={styles['table-container']}>
-                    {ALL_CASES_2.map((item) => (
-                        <AnimatedRect>
+                    {ALL_CASES_2.map((item, index) => (
+                        <AnimatedRect key={item.id}>
                             <NavLink to={String(item.id)}>
                                 <div className={styles['table-container__item']}>
                                     <div className={styles['table-container__item__top']}>
@@ -40,7 +40,7 @@ export const CasesPage = () => {
                                             <span className={styles['table-container__item__title']}>{item.title}</span>
                                         </div>
                                         <div className={styles['table-container__item__index-number']}>
-                                            {addZero(+item.id)}
+                                            {addZero(index + 1)}
                                         </div>
                                     </div>
                                     {/* <div className={styles['table-container__item__addition']}>{item.addition}</div> */}
@@ -56,3 +56,5 @@ export const CasesPage = () => {
         </Content>
     );
 };
+
+export default CasesPage;

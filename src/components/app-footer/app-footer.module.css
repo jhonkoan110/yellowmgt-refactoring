@@ -13,7 +13,9 @@
 
 .app-footer__nav-list {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
+    justify-content: center;
     gap: 4rem;
     text-transform: uppercase;
     font-size: 1.6rem;
