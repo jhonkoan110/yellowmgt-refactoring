@@ -59,14 +59,16 @@ const ConcreteCasePage = () => {
                             [styles['concrete-case-page__gallery__image_short-view']]: caseItem.isShortView,
                         })}>
                         <ConditionalNavlink link={caseItem.link}>
-                            <Image
-                                className={cn(styles['concrete-case-page__gallery__image'], {
-                                    [styles['concrete-case-page__gallery__image_short-view']]: caseItem.isShortView,
-                                })}
-                                src={caseItem.imageSrc}
-                                alt={caseItem.description}
-                            />
-                            <p className={styles['concrete-case-page__gallery__text']}>{caseItem.description}</p>
+                            <div>
+                                <Image
+                                    className={cn(styles['concrete-case-page__gallery__image'], {
+                                        [styles['concrete-case-page__gallery__image_short-view']]: caseItem.isShortView,
+                                    })}
+                                    src={caseItem.imageSrc}
+                                    alt={caseItem.description}
+                                />
+                                <p className={styles['concrete-case-page__gallery__text']}>{caseItem.description}</p>
+                            </div>
                         </ConditionalNavlink>
                     </div>
                 ))}

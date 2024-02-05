@@ -11,7 +11,7 @@ const ContactUsPage = () => {
         <Content>
             <Breadcrumbs />
 
-            <h1 className={styles['contact-us-page__title']}>Please, if you have any questions, please contact us</h1>
+            <h1 className={styles['contact-us-page__title']}>Contact us</h1>
 
             <div className={styles['contact-us-page__mail-container']}>
                 <Mail />
