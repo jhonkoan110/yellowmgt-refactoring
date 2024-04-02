@@ -10,10 +10,6 @@ import { NavLink } from 'react-router-dom';
 import styles from './cases-page.module.css';
 import { AnimatedRect } from 'components/animated-rect';
 
-// const addZero = (value: number) => {
-//     return value < 10 ? `0${value}` : value;
-// };
-
 const CasesPage = () => {
     useEffect(() => {
         scrollToTop();
@@ -23,8 +19,6 @@ const CasesPage = () => {
         <Content>
             <section>
                 <Breadcrumbs />
-
-                {/* <AnimatedRect /> */}
 
                 <div className={styles['table-container']}>
                     {ALL_CASES_2.map((item) => (

@@ -49,6 +49,7 @@ body::before {
 
     /* Colors */
     --app-background: #fffdf2;
+    --grey: #282828;
     --grey-2: #4f4f4f;
     --orange: #fde170;
 

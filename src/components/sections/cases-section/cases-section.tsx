@@ -1,13 +1,13 @@
 import React from 'react';
 
 import { SectionTitle } from 'components/section-title';
-// import { CasesSectionItem } from './cases-section-item';
 
 import styles from './cases-section.module.css';
 import { NavLink } from 'react-router-dom';
 import { Content } from 'components/content';
 import { jData } from 'constants/data';
 import { CasesSectionItem2 } from './cases-section-item2';
+import { Image } from 'components/image';
 const {
     lords_mobile,
     pubg_mobile_x_league_of_legends,
@@ -27,23 +27,23 @@ export const CasesSection = () => {
 
             <Content>
                 <ul className={styles['cases-list']}>
-                    {/* <ul className={styles['cases-list']}> */}
                     {cases.map((caseItem) => (
+                        <NavLink to={`/cases/${caseItem.id}`}>
+                            <li className={styles['cases-list__item']}>
+                                <Image src={caseItem.productLogo} width={80} />
+                                <div>{caseItem.title}</div>
+                            </li>
+                        </NavLink>
+                    ))}
+                    {/* {cases.map((caseItem) => (
                         <CasesSectionItem2
                             key={caseItem.id}
                             title={caseItem.title}
                             imageSrc={caseItem.productLogo!}
                             id={caseItem.id}
                         />
-                        // <CasesSectionItem
-                        //     key={caseItem.id}
-                        //     addition={caseItem.addition}
-                        //     title={caseItem.title}
-                        //     imageSrc={caseItem.cases[0].imageSrc}
-                        // />
-                    ))}
+                    ))} */}
                 </ul>
-                {/* </ul> */}
 
                 <NavLink to="/cases" className={styles.link}>
                     <button>see all cases</button>
