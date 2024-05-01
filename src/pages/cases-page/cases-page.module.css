@@ -56,6 +56,12 @@
     cursor: pointer;
 }
 
+.cases {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+}
+
 @media screen and (max-width: 426px) {
     .table-container {
         flex-direction: column;

@@ -58,7 +58,7 @@ interface Tmp {
     companyName: Companies;
     title: string;
     addition: string;
-    productLogo?: string;
+    productLogo: string;
     cases: {
         id: number;
         link: string;

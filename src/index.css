@@ -48,10 +48,11 @@ body::before {
     /* --mobile-app-width: 425px; */
 
     /* Colors */
-    --app-background: #fffdf2;
+    --app-background: #fffbf2;
     --grey: #282828;
     --grey-2: #4f4f4f;
     --orange: #fde170;
+    --yellow-grey: #f6ead9;
 
     /* Fonts */
     --poppins: Poppins, sans-serif;

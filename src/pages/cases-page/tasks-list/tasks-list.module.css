@@ -1,0 +1,27 @@
+.tasks-list {
+    list-style: none;
+    margin-left: 0.9rem;
+}
+
+.tasks-list__title {
+    font-family: var(--barracuda);
+    font-size: 2rem;
+    line-height: 2.4rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: var(--grey);
+}
+
+.tasks-list__item {
+    display: flex;
+    gap: 9px;
+    font-size: 1.6rem;
+    align-items: center;
+}
+
+.tasks-list__item-dot {
+    border-radius: 50%;
+    height: 6px;
+    width: 6px;
+    background-color: var(--grey);
+}

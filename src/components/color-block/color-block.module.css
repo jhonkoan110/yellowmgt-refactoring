@@ -1,0 +1,12 @@
+.color-block {
+    padding: 1.6rem;
+    border-radius: 12px;
+}
+
+.color-block_yellow {
+    background-color: var(--orange);
+}
+
+.color-block_grey {
+    background-color: var(--yellow-grey);
+}
