@@ -1,1 +1,1 @@
-export { BloggersList } from './bloggers-list';
+export { ActivationList } from './activation-list';

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { NavLink } from 'react-router-dom';
 
 import { SectionTitle } from 'components/section-title';
@@ -16,12 +16,6 @@ import styles from './we-worked-with-section.module.css';
 import { Image } from 'components/image';
 
 export const WeWorkedWithSection = () => {
-    const [showNutaku, setShowNutaku] = useState(false);
-
-    const handleClickSeeAll = () => {
-        setShowNutaku(true);
-    };
-
     return (
         <section>
             <SectionTitle title="we worked with" />
@@ -39,11 +33,9 @@ export const WeWorkedWithSection = () => {
                 <NavLink to="https://www.masomo.com/" target="_blank">
                     <Image className={styles.masomo} src={masogoLogo} />
                 </NavLink>
-                {showNutaku && (
-                    <NavLink to="https://www.nutaku.net/" target="_blank">
-                        <Image className={styles.nutaku} src={nutakuLogo} />
-                    </NavLink>
-                )}
+                <NavLink to="https://www.nutaku.net/" target="_blank">
+                    <Image className={styles.nutaku} src={nutakuLogo} />
+                </NavLink>
                 <NavLink to="https://oasgames.com/wap/en/home.html" target="_blank">
                     <Image className={styles['oasis-games']} src={oasisGamesLogo} />
                 </NavLink>
@@ -54,12 +46,6 @@ export const WeWorkedWithSection = () => {
                     <Image className={styles['tencent-games']} src={tencentGamesLogo} />
                 </NavLink>
             </Content>
-
-            {!showNutaku && (
-                <button className={styles['see-all-btn']} onClick={handleClickSeeAll}>
-                    see all
-                </button>
-            )}
         </section>
     );
 };

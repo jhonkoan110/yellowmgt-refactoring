@@ -1,14 +1,27 @@
 .contact-us-page__title {
-    font-size: 3rem;
+    color: var(--grey);
+    font-size: 8rem;
     font-weight: 400;
 }
 
 .contact-us-page__mail-container {
     margin-top: 3rem;
+    color: #8098ff;
+    font-size: 3rem;
+}
+
+.text {
+    margin-top: 4rem;
+    font-size: 21px;
+    width: 700px;
 }
 
 @media screen and (max-width: 426px) {
     .contact-us-page__title {
-        font-size: 2.5rem;
+        font-size: 4rem;
+    }
+
+    .text {
+        width: auto;
     }
 }

@@ -43,6 +43,7 @@
 }
 
 .services-list .tooltip {
+    border-radius: 8px;
     background-color: var(--grey);
     color: var(--app-background);
     padding: 1.6rem;
@@ -54,6 +55,10 @@
 }
 
 @media screen and (max-width: 426px) {
+    .root {
+        margin-top: 4rem;
+    }
+
     .content-container {
         flex-direction: column;
         gap: 4rem;
@@ -61,9 +66,13 @@
 
     .services-list {
         width: auto;
+        flex-direction: column;
     }
 
     .services-list__item {
         gap: 4.1rem;
+        width: 100%;
+        font-size: 2.8rem;
+        justify-content: space-between;
     }
 }

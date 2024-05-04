@@ -1,29 +1,39 @@
 import React from 'react';
 import { ColorBlock } from 'components/color-block';
+import cn from 'classnames';
 
 import styles from './cases-page-item.module.css';
 import { Image } from 'components/image';
 import { TasksList } from '../tasks-list';
-import { BloggersList } from '../bloggers-list';
+import { ActivationList } from '../bloggers-list/activation-list';
 
 interface CasesPageItemProps {
     title: string;
     logo: string;
     tasks: string[];
-    bloggers: string[];
+    activation: string[];
     text: string;
     imageLinks: string[];
     isShorts?: boolean;
+    creators: string;
+    extra: {
+        title: string;
+        text: string;
+    };
+    views: string;
 }
 
 export const CasesPageItem = ({
     title,
     logo,
     tasks,
-    bloggers,
+    activation,
     text,
     imageLinks,
     isShorts = false,
+    creators,
+    views,
+    extra,
 }: CasesPageItemProps) => {
     return (
         <div className={styles['cases-page-item']}>
@@ -37,7 +47,12 @@ export const CasesPageItem = ({
                             </div>
                         ) : (
                             <div key={imageLink} className={styles['div-container']}>
-                                <Image src={imageLink} className={styles['div-container__item']} />
+                                <Image
+                                    src={imageLink}
+                                    className={cn(styles['div-container__item'], {
+                                        [styles['div-container__item_only']]: imageLinks.length === 1,
+                                    })}
+                                />
                             </div>
                         ),
                     )}
@@ -46,32 +61,30 @@ export const CasesPageItem = ({
             <div className={styles['cases-page-item__right']}>
                 <div className={styles['cases-page-item__right-top']}>
                     <ColorBlock className={styles['cases-page-item__right-top-logo']}>
-                        <Image src={logo} width={165} height={100} />
+                        <Image src={logo} className={styles.logo} />
                     </ColorBlock>
                     <ColorBlock>
                         <TasksList data={tasks} />
                     </ColorBlock>
                 </div>
-                <BloggersList data={bloggers} />
+                <ActivationList data={activation} />
                 <div className={styles['cases-page-item__right-bottom']}>
                     <ColorBlock className={styles['cases-page-item__right-bottom-text']}>{text}</ColorBlock>
                     <div className={styles['cases-page-item__right-bottom-features']}>
                         <ColorBlock>
-                            <h3 className={styles['cases-page-item__right-bottom-feature-item-title']}>150+</h3>
-                            <p className={styles['cases-page-item__right-bottom-feature-item-description']}>
-                                Чего-то там кого-то там
-                            </p>
+                            <h3 className={styles['cases-page-item__right-bottom-feature-item-title']}>{creators}</h3>
+                            <p className={styles['cases-page-item__right-bottom-feature-item-description']}>Creators</p>
                         </ColorBlock>
                         <ColorBlock>
-                            <h3 className={styles['cases-page-item__right-bottom-feature-item-title']}>150+</h3>
-                            <p className={styles['cases-page-item__right-bottom-feature-item-description']}>
-                                Чего-то там кого-то там
-                            </p>
+                            <h3 className={styles['cases-page-item__right-bottom-feature-item-title']}>{views}</h3>
+                            <p className={styles['cases-page-item__right-bottom-feature-item-description']}>Views</p>
                         </ColorBlock>
                         <ColorBlock>
-                            <h4 className={styles['date-title']}>september 2020</h4>
+                            <h3 className={styles['cases-page-item__right-bottom-feature-item-title']}>
+                                {extra.title}
+                            </h3>
                             <p className={styles['cases-page-item__right-bottom-feature-item-description']}>
-                                дата как это называется
+                                {extra.text}
                             </p>
                         </ColorBlock>
                     </div>

@@ -5,7 +5,7 @@ import { Content } from 'components/content';
 
 import styles from './concrete-case-page.module.css';
 import { Breadcrumbs } from 'components/breadcrumbs';
-import { useScrollToTop } from 'hooks/useScrollToTop';
+import { useScrollToTop } from 'hooks/use-scroll-to-top';
 import { useNavigate, useParams } from 'react-router-dom';
 import { jData } from 'constants/data';
 import { NavLink } from 'react-router-dom';

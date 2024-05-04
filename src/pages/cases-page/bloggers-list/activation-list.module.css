@@ -14,9 +14,13 @@
     align-items: center;
 }
 
+.bloggers-list__element {
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+}
+
 .bloggers-list__dot {
-    display: inline-block;
-    margin-right: 0.9rem;
     width: 6px;
     height: 6px;
     border-radius: 50%;
@@ -24,6 +28,9 @@
 }
 
 .bloggers-list__name {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
     text-transform: uppercase;
     font-size: 1.6rem;
     line-height: 2.4rem;

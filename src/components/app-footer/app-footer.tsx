@@ -6,8 +6,8 @@ import appLogo from 'assets/desktop-logo.svg';
 import { HashLink } from 'react-router-hash-link';
 
 import styles from './app-footer.module.css';
-import { scrollToTop } from 'utils/scrollToTop';
-import { useScrollToTop } from 'hooks/useScrollToTop';
+import { scrollToTop } from 'utils/scroll-to-top';
+import { useScrollToTop } from 'hooks/use-scroll-to-top';
 import { Image } from 'components/image';
 
 export const AppFooter = () => {

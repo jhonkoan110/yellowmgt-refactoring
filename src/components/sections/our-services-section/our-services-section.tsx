@@ -47,19 +47,22 @@ export const OurServicesSection = () => {
             <Content>
                 <div className={styles['services-list']}>
                     {services.map((service) => (
-                        <>
-                            <a
-                                id={service.title}
-                                key={service.title}
-                                className={styles['services-list__item']}
-                                title={service.text}>
+                        <React.Fragment key={service.title}>
+                            <a id={service.title} key={service.title} className={styles['services-list__item']}>
                                 <div className={styles['services-list__item__title']}>{service.title}</div>
                                 <div>
                                     <CirclePlusIcon />
                                 </div>
                             </a>
-                            <Tooltip anchorSelect={`#${service.title}`} content={service.text} opacity={1} className={styles.tooltip} place='bottom' />
-                        </>
+                            <Tooltip
+                                anchorSelect={`#${service.title}`}
+                                content={service.text}
+                                opacity={1}
+                                className={styles.tooltip}
+                                place="bottom"
+                                noArrow={true}
+                            />
+                        </React.Fragment>
                     ))}
                 </div>
             </Content>

@@ -8,7 +8,7 @@ import { HashLink } from 'react-router-hash-link';
 import { NavLink } from 'react-router-dom';
 
 import styles from './app-header.module.css';
-import { scrollToTop } from 'utils/scrollToTop';
+import { scrollToTop } from 'utils/scroll-to-top';
 import { MobileMenu } from './mobile-menu';
 
 export const AppHeader = () => {
@@ -31,9 +31,6 @@ export const AppHeader = () => {
                             <ul className={styles['nav-list']}>
                                 <HashLink to="/#about">
                                     <li>about us</li>
-                                </HashLink>
-                                <HashLink to="/#our_services">
-                                    <li>our services</li>
                                 </HashLink>
                                 <NavLink to="/cases" onClick={scrollToTop}>
                                     <li>cases</li>

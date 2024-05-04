@@ -40,9 +40,6 @@ export const MobileMenu = memo(({ visible, onClose }: MobileMenuProps) => {
                         <HashLink to="/#about" onClick={onClose}>
                             <li className={styles['mobile-menu__nav-list__item']}>about us</li>
                         </HashLink>
-                        <HashLink to="/#our_services" onClick={onClose}>
-                            <li className={styles['mobile-menu__nav-list__item']}>our services</li>
-                        </HashLink>
                         <NavLink to="/cases" onClick={onClose}>
                             <li className={styles['mobile-menu__nav-list__item']}>cases</li>
                         </NavLink>

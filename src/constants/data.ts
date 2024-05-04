@@ -6,9 +6,6 @@ import iggTimePrincess2 from 'assets/cases/igg-time-princess-2.jpg';
 import iggTimePrincess3 from 'assets/cases/igg-time-princess-3.jpg';
 import iggTimePrincess4 from 'assets/cases/igg-time-princess-4.jpg';
 
-import iggCosplay1 from 'assets/cases/igg-cosplay-1.jpg';
-import iggCosplay2 from 'assets/cases/igg-cosplay-2.jpg';
-
 import wildlifeZooba1 from 'assets/cases/wildlife-zooba-1.jpg';
 import wildlifeZooba2 from 'assets/cases/wildlife-zooba-2.jpg';
 import wildlifeZooba3 from 'assets/cases/wildlife-zooba-3.jpg';
@@ -27,18 +24,15 @@ import matchGroupAblo11 from 'assets/cases/match-group-ablo-11.jpg';
 
 import masomoBasketball1 from 'assets/cases/masomo-basketball-1.jpg';
 
-import tencentPubgMobileSong1 from 'assets/cases/tencent-pubg-mobile-song-1.jpg';
-
 import tencentPubgProLeague1 from 'assets/cases/tencent-pubg-pro-league-1.jpg';
 import tencentPubgProLeague2 from 'assets/cases/tencent-pubg-pro-league-2.jpg';
 import tencentPubgProLeague3 from 'assets/cases/tencent-pubg-pro-league-3.jpg';
-
-import tencentMobileLeagueOfLegends1 from 'assets/cases/tencent-mobile-league-of-legends-1.jpg';
 
 import lordsMobileLogo from 'assets/lords-mobile-logo.png';
 import pubgMobileLogo from 'assets/pubg-mobile-logo.png';
 import basketballArenaLogo from 'assets/basketball-arena-logo.png';
 import abloLogo from 'assets/ablo-logo.png';
+import zoobaLogo from 'assets/zooba-logo.png';
 import tennisClashLogo from 'assets/tennis-clash-logo.png';
 import timePrincessLogo from 'assets/time-princess-logo.png';
 
@@ -53,9 +47,26 @@ export enum Companies {
     TencentGames = 'tencent games',
 }
 
+export enum Activation {
+    YouTube = 'Y',
+    TikTok = 'T',
+    Instagram = 'I',
+}
+
 interface Tmp {
     id: number | string;
     companyName: Companies;
+    isShorts?: boolean;
+    tasks: string[];
+    // activation: ['youtube'],
+    activation: Activation[];
+    creators: string;
+    views: string;
+    extra: {
+        title: string;
+        text: string;
+    };
+    // likes: string;
     title: string;
     addition: string;
     productLogo: string;
@@ -74,7 +85,16 @@ export const jData: Record<string, Tmp> = {
         id: 'lords_mobile',
         companyName: Companies.IGG,
         title: 'lords mobile',
-        addition: '360° Campaign Development',
+        tasks: ['360° Campaign', 'Creative & Production'],
+        activation: [Activation.YouTube],
+        addition:
+            'We strategized and selected Influencers in line with the goals of the advertising campaign for Lords Mobile. The right choice of Influencers helped to achieve the necessary results and success in the campaign.',
+        extra: {
+            text: 'Positive Feedback',
+            title: '96%',
+        },
+        creators: '12+',
+        views: '18M+',
         productLogo: lordsMobileLogo,
         cases: [
             {
@@ -95,8 +115,11 @@ export const jData: Record<string, Tmp> = {
         id: 'time_princess',
         companyName: Companies.IGG,
         title: 'time princess',
+        tasks: ['360° Campaign', 'Creative & Production'],
+        activation: [Activation.YouTube],
         productLogo: timePrincessLogo,
-        addition: '360° Campaign Development',
+        addition:
+            'We developed a massive advertising campaign for a new game from IGG called Time Princes. We used more than 30 Influencers on TikTok, Instagram and YouTube.',
         cases: [
             {
                 id: 1,
@@ -123,36 +146,47 @@ export const jData: Record<string, Tmp> = {
                 description: 'Daria Graph / youtube',
             },
         ],
+        extra: {
+            text: 'KPI',
+            title: '160%',
+        },
+        creators: '34+',
+        views: '38M+',
     },
-    time_princess_cosplay_instagram: {
-        id: 'time_princess_cosplay_instagram',
-        companyName: Companies.IGG,
-        title: 'Time Princess. Cosplay. Instagram',
-        addition: '360° Campaign Development',
-        productLogo: timePrincessLogo,
-        cases: [
-            {
-                id: 1,
-                link: 'https://www.instagram.com/p/CNKjXKrMpui/?igshid=ssvgs12nsnhz',
-                imageSrc: iggCosplay1,
-                height: 417,
-                description: 'burning.princess / instagram',
-            },
-            {
-                id: 2,
-                link: 'https://www.instagram.com/p/CNKi9cmgKmZ/?img_index=1',
-                imageSrc: iggCosplay2,
-                height: 417,
-                description: '_raspytina_ / instagram',
-            },
-        ],
-    },
-    'zooba_&_tennis_clash': {
-        id: 'zooba_&_tennis_clash',
+    // time_princess_cosplay_instagram: {
+    //     id: 'time_princess_cosplay_instagram',
+    //     companyName: Companies.IGG,
+    //     title: 'Time Princess. Cosplay. Instagram',
+    //     addition: '360° Campaign Development',
+    //     productLogo: timePrincessLogo,
+    //     cases: [
+    //         {
+    //             id: 1,
+    //             link: 'https://www.instagram.com/p/CNKjXKrMpui/?igshid=ssvgs12nsnhz',
+    //             imageSrc: iggCosplay1,
+    //             height: 417,
+    //             description: 'burning.princess / instagram',
+    //         },
+    //         {
+    //             id: 2,
+    //             link: 'https://www.instagram.com/p/CNKi9cmgKmZ/?img_index=1',
+    //             imageSrc: iggCosplay2,
+    //             height: 417,
+    //             description: '_raspytina_ / instagram',
+    //         },
+    //     ],
+    //     likes: 'KPI 100%',
+    //     creators: '6+',
+    //     views: '2M+',
+    //     tasks: ['360° Campaign'],
+    //     activation: ['youtube'],
+    // },
+    zooba: {
+        id: 'zooba',
         companyName: Companies.WildLife,
-        addition: '360° Campaign Development',
-        title: 'Zooba & Tennis Clash',
-        productLogo: tennisClashLogo,
+        addition:
+            'Zooba is an awesome third-person action game in which you fight enemies as a very cute animal shooter.' +
+            ' We selected Influencers with a young audience and ran a successful campaign.',
         cases: [
             {
                 id: 1,
@@ -160,25 +194,92 @@ export const jData: Record<string, Tmp> = {
                 imageSrc: wildlifeZooba1,
                 description: 'LINE / youtube',
             },
+        ],
+        tasks: ['360° Campaign'],
+        activation: [Activation.YouTube],
+        // productLogo: tennisClashLogo,
+        productLogo: zoobaLogo,
+        title: 'ZOOBA',
+        extra: {
+            text: 'KPI',
+            title: '100%',
+        },
+        creators: '6+',
+        views: '2M+',
+    },
+    tennis_clash: {
+        id: 'tennis_clash',
+        companyName: Companies.WildLife,
+        addition:
+            'Tennis Clash is an online tennis game where you can play against other players in exciting short matches.' +
+            ' We developed a strategy and launched a campaign for an adult target audience.',
+        title: 'Tennis Clash',
+        productLogo: tennisClashLogo,
+        cases: [
             {
-                id: 2,
+                id: 1,
                 link: 'https://www.youtube.com/watch?v=cNDxBWToyxQ',
                 imageSrc: wildlifeZooba2,
                 description: 'Fan PDA / youtube',
             },
             {
-                id: 3,
+                id: 2,
                 link: 'https://www.youtube.com/watch?v=lRMgKuV3MrE',
                 imageSrc: wildlifeZooba3,
                 description: 'КиноИндустрия / youtube',
             },
         ],
+        extra: {
+            title: '60K+',
+            text: 'Likes',
+        },
+        creators: '4+',
+        views: '1.6M+',
+        tasks: ['360° Campaign'],
+        activation: [Activation.YouTube],
     },
+    // 'zooba_&_tennis_clash': {
+    //     id: 'zooba_&_tennis_clash',
+    //     companyName: Companies.WildLife,
+    //     addition:
+    //         'Zooba is an awesome third-person action game in which you fight enemies as a very cute animal shooter.We selected Influencers with a young audience and ran a successful campaign.',
+    //     title: 'Zooba & Tennis Clash',
+    //     productLogo: tennisClashLogo,
+    //     cases: [
+    //         {
+    //             id: 1,
+    //             link: 'https://www.youtube.com/watch?v=0xj6QJFzi2g&t=94s',
+    //             imageSrc: wildlifeZooba1,
+    //             description: 'LINE / youtube',
+    //         },
+    //         {
+    //             id: 2,
+    //             link: 'https://www.youtube.com/watch?v=cNDxBWToyxQ',
+    //             imageSrc: wildlifeZooba2,
+    //             description: 'Fan PDA / youtube',
+    //         },
+    //         {
+    //             id: 3,
+    //             link: 'https://www.youtube.com/watch?v=lRMgKuV3MrE',
+    //             imageSrc: wildlifeZooba3,
+    //             description: 'КиноИндустрия / youtube',
+    //         },
+    //     ],
+    //     likes: 'KPI 100%',
+    //     creators: '6+',
+    //     views: '2M+',
+    //     tasks: ['360° Campaign'],
+    //     activation: ['youtube'],
+    // },
     ablo: {
         id: 'ablo',
         companyName: Companies.MatchGroup,
         title: 'Ablo',
-        addition: '360° Campaign Development',
+        isShorts: true,
+        addition:
+            'Ablo is a social network for instant communication. ' +
+            'It allowed users to communicate with people from anywhere in the world by having live text and video conversations using an automatic translation function. ' +
+            'We developed and implemented more than a dozen successful advertising campaigns for Ablo in different countries.',
         productLogo: abloLogo,
         cases: [
             {
@@ -258,12 +359,23 @@ export const jData: Record<string, Tmp> = {
                 description: 'mar.maries / youtube',
             },
         ],
+        extra: {
+            title: '98%',
+            text: 'Positive Feedback',
+        },
+        creators: '40+',
+        views: '27M+',
+        tasks: ['360° Campaign', 'Creative & Production', 'etc.'],
+        activation: [Activation.YouTube, Activation.Instagram],
     },
     basketball_arena: {
         id: 'basketball_arena',
         companyName: Companies.Masomo,
         title: 'basketball arena',
-        addition: '360° Campaign Development',
+        addition:
+            'Basketball Arena is a sports game similar to Head Ball that has already won the hearts of a million players around the world. ' +
+            "The familiar dummy athletes are back, and this time they're playing basketball. " +
+            'Together with Masomo we strategized and selected active, athletic and young Influencers and launched a successful campaign.',
         productLogo: basketballArenaLogo,
         cases: [
             {
@@ -273,28 +385,46 @@ export const jData: Record<string, Tmp> = {
                 description: 'Lesha Maisak / youtube',
             },
         ],
+        extra: {
+            text: 'Likes',
+            title: '80K+',
+        },
+        creators: '4+',
+        views: '7M+',
+        tasks: ['360° Campaign', 'Creative & Production'],
+        activation: [Activation.YouTube],
     },
-    'pubg_mobile_(song)': {
-        id: 'pubg_mobile_(song)',
+    // 'pubg_mobile_(song)': {
+    //     id: 'pubg_mobile_(song)',
+    //     companyName: Companies.TencentGames,
+    //     title: 'pubg mobile (song)',
+    //     addition: '360° Campaign Development',
+    //     productLogo: pubgMobileLogo,
+    //     cases: [
+    //         {
+    //             id: 1,
+    //             link: 'https://www.youtube.com/watch?v=mxyu5lIukyM',
+    //             imageSrc: tencentPubgMobileSong1,
+    //             description: 'PUBG MOBILE СНГ / youtube',
+    //         },
+    //     ],
+    //     likes: 'KPI 100%',
+    //     creators: '6+',
+    //     views: '2M+',
+    //     tasks: ['360° Campaign'],
+    //     activation: ['youtube'],
+    // },
+    pubg_mobile: {
+        id: 'pubg_mobile',
+        isShorts: true,
         companyName: Companies.TencentGames,
-        title: 'pubg mobile (song)',
-        addition: '360° Campaign Development',
+        addition:
+            'PUBG Mobile is a conditional free-to-play mobile multiplayer online battle royal game. ' +
+            'PUBG Mobile has an audience of over one hundred million active players worldwide. ' +
+            'We have launched over 20 incredible campaigns for PUBGM on YouTube, TikTok, Instagram. ' +
+            'We have written and published tracks, created unique content, as well as run a huge number of campaigns with Influencers!',
         productLogo: pubgMobileLogo,
-        cases: [
-            {
-                id: 1,
-                link: 'https://www.youtube.com/watch?v=mxyu5lIukyM',
-                imageSrc: tencentPubgMobileSong1,
-                description: 'PUBG MOBILE СНГ / youtube',
-            },
-        ],
-    },
-    pubg_mobile_pro_league: {
-        id: 'pubg_mobile_pro_league',
-        companyName: Companies.TencentGames,
-        addition: '360° Campaign Development',
-        productLogo: pubgMobileLogo,
-        title: 'pubg mobile. pro league europe championship season 1',
+        title: 'pubg mobile',
         cases: [
             {
                 id: 1,
@@ -318,22 +448,35 @@ export const jData: Record<string, Tmp> = {
                 description: 'TIM / tiktok',
             },
         ],
+        extra: {
+            text: 'Likes',
+            title: '1.5M+',
+        },
+        creators: '25+',
+        views: '40M+',
+        tasks: ['360° Campaign', 'Creative & Production', 'etc.'],
+        activation: [Activation.YouTube, Activation.TikTok, Activation.Instagram],
     },
-    pubg_mobile_x_league_of_legends: {
-        id: 'pubg_mobile_x_league_of_legends',
-        companyName: Companies.TencentGames,
-        addition: '360° Campaign Development',
-        title: 'pubg mobile x League of Legends',
-        productLogo: pubgMobileLogo,
-        cases: [
-            {
-                id: 1,
-                imageSrc: tencentMobileLeagueOfLegends1,
-                link: 'https://www.youtube.com/watch?v=MXkjK856hKg',
-                description: 'danya milokhin / youtube',
-            },
-        ],
-    },
+    // pubg_mobile_x_league_of_legends: {
+    //     id: 'pubg_mobile_x_league_of_legends',
+    //     companyName: Companies.TencentGames,
+    //     addition: '360° Campaign Development',
+    //     title: 'pubg mobile x League of Legends',
+    //     productLogo: pubgMobileLogo,
+    //     cases: [
+    //         {
+    //             id: 1,
+    //             imageSrc: tencentMobileLeagueOfLegends1,
+    //             link: 'https://www.youtube.com/watch?v=MXkjK856hKg',
+    //             description: 'danya milokhin / youtube',
+    //         },
+    //     ],
+    //     likes: 'KPI 100%',
+    //     creators: '6+',
+    //     views: '2M+',
+    //     tasks: ['360° Campaign'],
+    //     activation: ['youtube'],
+    // },
 };
 
 export const ALL_CASES_2 = Object.keys(jData).map((key) => jData[key]);

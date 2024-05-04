@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 
 import { Content } from 'components/content';
 import { Breadcrumbs } from 'components/breadcrumbs';
-import { scrollToTop } from 'utils/scrollToTop';
+import { scrollToTop } from 'utils/scroll-to-top';
 import { CasesPageItem } from './cases-page-item';
 import { ALL_CASES_2 } from 'constants/data';
 
@@ -21,12 +21,16 @@ const CasesPage = () => {
                 <div className={styles.cases}>
                     {ALL_CASES_2.map((caseItem) => (
                         <CasesPageItem
-                            imageLinks={caseItem.cases.map((c) => c.imageSrc)}
-                            title={`${caseItem.companyName}. ${caseItem.title}`}
+                            imageLinks={caseItem.cases.slice(0, 4).map((c) => c.imageSrc)}
+                            title={caseItem.title}
                             logo={caseItem.productLogo}
-                            tasks={['Creative & Production', 'Creative & Production', 'Creative & Production']}
-                            text="We strategized and selected Influencers in line with the goals of the advertising campaign for Lords Mobile. The right choice of Influencers helped to achieve the necessary results and success in the campaign."
-                            bloggers={['Brigman', 'Leliya Taxi']}
+                            tasks={caseItem.tasks}
+                            text={caseItem.addition}
+                            activation={caseItem.activation}
+                            creators={caseItem.creators}
+                            views={caseItem.views}
+                            extra={caseItem.extra}
+                            isShorts={caseItem.isShorts}
                         />
                     ))}
                 </div>
