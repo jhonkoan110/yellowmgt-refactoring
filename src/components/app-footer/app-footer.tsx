@@ -18,14 +18,13 @@ export const AppFooter = () => {
             <Content className={styles['app-footer__content-container']}>
                 <ul className={styles['app-footer__nav-list']}>
                     <HashLink to="/#about">about us</HashLink>
-                    <HashLink to="/#our_services">our services</HashLink>
                     <NavLink to="/cases">cases</NavLink>
                     <NavLink to="/contact_us">contact us</NavLink>
                 </ul>
                 <NavLink to="/" onClick={scrollToTop}>
                     <Image className={styles['mobile-logo']} src={appLogo} alt="yellowmgt-logo" />
                 </NavLink>
-                <small className={styles['app-footer__copyrights']}>YELLOWMGT &copy; 2023 All rights reserved</small>
+                <small className={styles['app-footer__copyrights']}>YELLOWMGT &copy; 2024 All rights reserved</small>
             </Content>
         </footer>
     );

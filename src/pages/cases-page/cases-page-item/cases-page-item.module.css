@@ -132,6 +132,10 @@
     gap: 8px;
 }
 
+.cases-page-item__right-bottom-features > div {
+    height: 104px;
+}
+
 .cases-page-item__right-bottom-feature-item-title {
     font-size: 5.4rem;
     font-family: var(--barracuda);

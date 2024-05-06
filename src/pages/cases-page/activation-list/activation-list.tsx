@@ -61,12 +61,16 @@ const activationTypes = {
             </svg>
         ),
     },
+    [Activation.Offline]: {
+        text: 'offline',
+        icon: '',
+    },
 };
 
 const ActiovationItem = ({ type }: ActivationItemProps) => {
     const data = activationTypes[type];
 
-    return (    
+    return (
         <span className={styles['bloggers-list__name']}>
             {data.text} {data.icon}
         </span>
@@ -81,7 +85,6 @@ export const ActivationList = ({ data }: ActivationListProps) => {
                 {data.map((bloggerName, index) => (
                     <li key={bloggerName} className={styles['bloggers-list__element']}>
                         {index !== 0 && <span className={styles['bloggers-list__dot']} />}
-                        {/* <span className={styles['bloggers-list__name']}>{bloggerName} </span> */}
                         <ActiovationItem type={bloggerName as Activation} />
                     </li>
                 ))}

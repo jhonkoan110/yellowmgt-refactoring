@@ -1,3 +1,15 @@
+import legacyOfDiscordLogo from 'assets/legacy-of-discord-logo.png';
+import legacyOfDiscord1 from 'assets/legacy-of-discord-1.jpg';
+
+import honkaiLogo from 'assets/honkai-logo.png';
+import honkai1 from 'assets/honkai-1.jpg';
+import honkai2 from 'assets/honkai-2.jpg';
+import honkai3 from 'assets/honkai-3.jpg';
+import honkai4 from 'assets/honkai-4.jpg';
+
+import nintendoLogo from 'assets/nintendo-logo.png';
+import nintendo1 from 'assets/nintendo-1.jpg';
+
 import iggLordsMobile1 from 'assets/cases/igg-lords-mobile-1.jpg';
 import iggLordsMobile2 from 'assets/cases/igg-lords-mobile-2.jpg';
 
@@ -45,19 +57,30 @@ export enum Companies {
     OasisGames = 'oasis games',
     WildLife = 'wildlife studios',
     TencentGames = 'tencent games',
+    Nintendo = 'nintendo',
+    Honkai = 'honkai',
+    LegacyOfDiscord = 'legacy of discord',
 }
 
 export enum Activation {
     YouTube = 'Y',
     TikTok = 'T',
     Instagram = 'I',
+    Offline = 'O',
+}
+
+export enum Tasks {
+    Campaign = '360° Campaign',
+    CreativeAndProduction = 'Creative & Production',
+    Etc = 'etc.',
+    PR = 'PR',
 }
 
 interface Tmp {
     id: number | string;
     companyName: Companies;
     isShorts?: boolean;
-    tasks: string[];
+    tasks: Tasks[];
     // activation: ['youtube'],
     activation: Activation[];
     creators: string;
@@ -81,11 +104,54 @@ interface Tmp {
 }
 
 export const jData: Record<string, Tmp> = {
+    pubg_mobile: {
+        id: 'pubg_mobile',
+        isShorts: true,
+        companyName: Companies.TencentGames,
+        addition:
+            'PUBG Mobile is a conditional free-to-play mobile multiplayer online battle royal game. ' +
+            'PUBG Mobile has an audience of over one hundred million active players worldwide. ' +
+            'We have launched over 20 incredible campaigns for PUBGM on YouTube, TikTok, Instagram. ' +
+            'We have written and published tracks, created unique content, as well as run a huge number of campaigns with Influencers!',
+        productLogo: pubgMobileLogo,
+        title: 'pubg mobile',
+        cases: [
+            {
+                id: 1,
+                link: 'https://www.tiktok.com/@kikakiim/video/7030026999682927873',
+                imageSrc: tencentPubgProLeague1,
+                isShortView: true,
+                description: 'Kika Kim / tiktok',
+            },
+            {
+                id: 2,
+                link: 'https://vm.tiktok.com/ZGJnnQhKs/',
+                imageSrc: tencentPubgProLeague2,
+                isShortView: true,
+                description: 'Dasha Dzhakeli / tiktok',
+            },
+            {
+                id: 3,
+                link: 'https://vm.tiktok.com/ZGJnn5Kr4/',
+                imageSrc: tencentPubgProLeague3,
+                isShortView: true,
+                description: 'TIM / tiktok',
+            },
+        ],
+        extra: {
+            text: 'Likes',
+            title: '1.5M+',
+        },
+        creators: '25+',
+        views: '40M+',
+        tasks: [Tasks.Campaign, Tasks.CreativeAndProduction, Tasks.Etc],
+        activation: [Activation.YouTube, Activation.TikTok, Activation.Instagram],
+    },
     lords_mobile: {
         id: 'lords_mobile',
         companyName: Companies.IGG,
         title: 'lords mobile',
-        tasks: ['360° Campaign', 'Creative & Production'],
+        tasks: [Tasks.Campaign, Tasks.CreativeAndProduction],
         activation: [Activation.YouTube],
         addition:
             'We strategized and selected Influencers in line with the goals of the advertising campaign for Lords Mobile. The right choice of Influencers helped to achieve the necessary results and success in the campaign.',
@@ -111,11 +177,36 @@ export const jData: Record<string, Tmp> = {
             },
         ],
     },
+    nintendo: {
+        id: 'nintendo',
+        companyName: Companies.Nintendo,
+        addition:
+            'Nintendo is one of the most popular video game and console companies in the world! ' +
+            "We've picked the perfect Influencers to show off all the benefits of Nintendo Switch for kids to play with.",
+        productLogo: nintendoLogo,
+        activation: [Activation.YouTube],
+        cases: [
+            {
+                id: 1,
+                description: '',
+                imageSrc: nintendo1,
+                link: '',
+            },
+        ],
+        creators: '4+',
+        tasks: [Tasks.Campaign, Tasks.CreativeAndProduction],
+        title: 'nintendo',
+        views: '7M+',
+        extra: {
+            text: 'KPI',
+            title: '100%',
+        },
+    },
     time_princess: {
         id: 'time_princess',
         companyName: Companies.IGG,
         title: 'time princess',
-        tasks: ['360° Campaign', 'Creative & Production'],
+        tasks: [Tasks.Campaign, Tasks.CreativeAndProduction],
         activation: [Activation.YouTube],
         productLogo: timePrincessLogo,
         addition:
@@ -195,7 +286,7 @@ export const jData: Record<string, Tmp> = {
                 description: 'LINE / youtube',
             },
         ],
-        tasks: ['360° Campaign'],
+        tasks: [Tasks.Campaign],
         activation: [Activation.YouTube],
         // productLogo: tennisClashLogo,
         productLogo: zoobaLogo,
@@ -235,7 +326,7 @@ export const jData: Record<string, Tmp> = {
         },
         creators: '4+',
         views: '1.6M+',
-        tasks: ['360° Campaign'],
+        tasks: [Tasks.Campaign],
         activation: [Activation.YouTube],
     },
     // 'zooba_&_tennis_clash': {
@@ -365,7 +456,7 @@ export const jData: Record<string, Tmp> = {
         },
         creators: '40+',
         views: '27M+',
-        tasks: ['360° Campaign', 'Creative & Production', 'etc.'],
+        tasks: [Tasks.Campaign, Tasks.CreativeAndProduction, Tasks.Etc],
         activation: [Activation.YouTube, Activation.Instagram],
     },
     basketball_arena: {
@@ -391,7 +482,7 @@ export const jData: Record<string, Tmp> = {
         },
         creators: '4+',
         views: '7M+',
-        tasks: ['360° Campaign', 'Creative & Production'],
+        tasks: [Tasks.Campaign, Tasks.CreativeAndProduction],
         activation: [Activation.YouTube],
     },
     // 'pubg_mobile_(song)': {
@@ -414,49 +505,7 @@ export const jData: Record<string, Tmp> = {
     //     tasks: ['360° Campaign'],
     //     activation: ['youtube'],
     // },
-    pubg_mobile: {
-        id: 'pubg_mobile',
-        isShorts: true,
-        companyName: Companies.TencentGames,
-        addition:
-            'PUBG Mobile is a conditional free-to-play mobile multiplayer online battle royal game. ' +
-            'PUBG Mobile has an audience of over one hundred million active players worldwide. ' +
-            'We have launched over 20 incredible campaigns for PUBGM on YouTube, TikTok, Instagram. ' +
-            'We have written and published tracks, created unique content, as well as run a huge number of campaigns with Influencers!',
-        productLogo: pubgMobileLogo,
-        title: 'pubg mobile',
-        cases: [
-            {
-                id: 1,
-                link: 'https://www.tiktok.com/@kikakiim/video/7030026999682927873',
-                imageSrc: tencentPubgProLeague1,
-                isShortView: true,
-                description: 'Kika Kim / tiktok',
-            },
-            {
-                id: 2,
-                link: 'https://vm.tiktok.com/ZGJnnQhKs/',
-                imageSrc: tencentPubgProLeague2,
-                isShortView: true,
-                description: 'Dasha Dzhakeli / tiktok',
-            },
-            {
-                id: 3,
-                link: 'https://vm.tiktok.com/ZGJnn5Kr4/',
-                imageSrc: tencentPubgProLeague3,
-                isShortView: true,
-                description: 'TIM / tiktok',
-            },
-        ],
-        extra: {
-            text: 'Likes',
-            title: '1.5M+',
-        },
-        creators: '25+',
-        views: '40M+',
-        tasks: ['360° Campaign', 'Creative & Production', 'etc.'],
-        activation: [Activation.YouTube, Activation.TikTok, Activation.Instagram],
-    },
+
     // pubg_mobile_x_league_of_legends: {
     //     id: 'pubg_mobile_x_league_of_legends',
     //     companyName: Companies.TencentGames,
@@ -477,6 +526,75 @@ export const jData: Record<string, Tmp> = {
     //     tasks: ['360° Campaign'],
     //     activation: ['youtube'],
     // },
+
+    honkai: {
+        id: 'honkai',
+        companyName: Companies.Honkai,
+        addition:
+            'Honkai:Star Rail is a popular game from the world famous HoYoverse company. ' +
+            "Together with our partners, we developed and recreated an offline event to coincide with the game's release.",
+        productLogo: honkaiLogo,
+        activation: [Activation.YouTube],
+        cases: [
+            {
+                id: 1,
+                description: '',
+                imageSrc: honkai1,
+                link: '',
+            },
+            {
+                id: 2,
+                description: '',
+                imageSrc: honkai2,
+                link: '',
+            },
+            {
+                id: 3,
+                description: '',
+                imageSrc: honkai3,
+                link: '',
+            },
+            {
+                id: 4,
+                description: '',
+                imageSrc: honkai4,
+                link: '',
+            },
+        ],
+        creators: 'NDA',
+        tasks: [Tasks.Campaign, Tasks.CreativeAndProduction],
+        title: 'honkai: star rail',
+        views: 'NDA',
+        extra: {
+            text: 'NDA',
+            title: 'NDA',
+        },
+        isShorts: true,
+    },
+    legacy_of_discord: {
+        id: 'legacy_of_discord',
+        companyName: Companies.LegacyOfDiscord,
+        addition:
+            'We prepared and conducted a large-scale advertising campaign to promote a new game from YooZoo called Legacy of Discord.',
+        productLogo: legacyOfDiscordLogo,
+        activation: [Activation.Offline],
+        cases: [
+            {
+                id: 1,
+                description: '',
+                imageSrc: legacyOfDiscord1,
+                link: '',
+            },
+        ],
+        creators: '14+',
+        tasks: [Tasks.Campaign, Tasks.CreativeAndProduction],
+        title: 'legacy of discord',
+        views: '8M+',
+        extra: {
+            text: 'Likes',
+            title: '400K+',
+        },
+    },
 };
 
 export const ALL_CASES_2 = Object.keys(jData).map((key) => jData[key]);

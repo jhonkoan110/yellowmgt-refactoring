@@ -49,7 +49,9 @@ export const OurServicesSection = () => {
                     {services.map((service) => (
                         <React.Fragment key={service.title}>
                             <a id={service.title} key={service.title} className={styles['services-list__item']}>
-                                <div className={styles['services-list__item__title']}>{service.title}</div>
+                                <div className={styles['services-list__item__title']}>
+                                    {service.title.replace('_', ' ')}
+                                </div>
                                 <div>
                                     <CirclePlusIcon />
                                 </div>

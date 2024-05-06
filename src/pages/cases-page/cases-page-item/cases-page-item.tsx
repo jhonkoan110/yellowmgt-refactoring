@@ -5,7 +5,7 @@ import cn from 'classnames';
 import styles from './cases-page-item.module.css';
 import { Image } from 'components/image';
 import { TasksList } from '../tasks-list';
-import { ActivationList } from '../bloggers-list/activation-list';
+import { ActivationList } from '../activation-list/activation-list';
 
 interface CasesPageItemProps {
     title: string;
@@ -22,6 +22,10 @@ interface CasesPageItemProps {
     };
     views: string;
 }
+
+const checkNDA = (value: string) => {
+    return value === 'NDA';
+};
 
 export const CasesPageItem = ({
     title,
@@ -73,19 +77,29 @@ export const CasesPageItem = ({
                     <div className={styles['cases-page-item__right-bottom-features']}>
                         <ColorBlock>
                             <h3 className={styles['cases-page-item__right-bottom-feature-item-title']}>{creators}</h3>
-                            <p className={styles['cases-page-item__right-bottom-feature-item-description']}>Creators</p>
+                            {!checkNDA(creators) && (
+                                <p className={styles['cases-page-item__right-bottom-feature-item-description']}>
+                                    Creators
+                                </p>
+                            )}
                         </ColorBlock>
                         <ColorBlock>
                             <h3 className={styles['cases-page-item__right-bottom-feature-item-title']}>{views}</h3>
-                            <p className={styles['cases-page-item__right-bottom-feature-item-description']}>Views</p>
+                            {!checkNDA(views) && (
+                                <p className={styles['cases-page-item__right-bottom-feature-item-description']}>
+                                    Views
+                                </p>
+                            )}
                         </ColorBlock>
                         <ColorBlock>
                             <h3 className={styles['cases-page-item__right-bottom-feature-item-title']}>
                                 {extra.title}
                             </h3>
-                            <p className={styles['cases-page-item__right-bottom-feature-item-description']}>
-                                {extra.text}
-                            </p>
+                            {!checkNDA(extra.title) && (
+                                <p className={styles['cases-page-item__right-bottom-feature-item-description']}>
+                                    {extra.text}
+                                </p>
+                            )}
                         </ColorBlock>
                     </div>
                 </div>
