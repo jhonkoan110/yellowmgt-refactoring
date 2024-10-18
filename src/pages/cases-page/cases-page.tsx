@@ -21,6 +21,7 @@ const CasesPage = () => {
                 <div className={styles.cases}>
                     {ALL_CASES_2.map((caseItem) => (
                         <CasesPageItem
+                            key={caseItem.id}
                             imageLinks={caseItem.cases.slice(0, 4).map((c) => c.imageSrc)}
                             title={caseItem.title}
                             logo={caseItem.productLogo}

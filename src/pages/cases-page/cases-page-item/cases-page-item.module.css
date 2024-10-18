@@ -63,6 +63,11 @@
 }
 
 /* ==== Shorts ==== */
+.divs_shorts {
+    position: relative;
+    margin-top: 0.8rem;
+}
+
 .div-container-shorts {
     position: absolute;
     padding: 8px;
@@ -89,7 +94,7 @@
 .div-container-shorts__item {
     border-radius: 8px;
     height: 300px;
-    width: 168px;
+    width: 100%;
 }
 
 /* ==== Right ==== */
@@ -163,9 +168,98 @@
     .cases-page-item__header {
         font-size: 4rem;
     }
-    
+
+    .divs-1 {
+        position: relative;
+        width: 100%;
+        margin-top: 0.8rem;
+        height: 204px;
+    }
+
+    .div-container__item_only {
+        height: 188px;
+    }
+
+
+    .divs-2 {
+        position: relative;
+        width: 100%;
+        margin-top: 0.8rem;
+        height: 359px;
+    }
+
+    .divs-4 {
+        position: relative;
+        height: 670px;
+        margin-top: 0.8rem;
+        width: 100%;
+    }
+
+    .div-container {
+        width: 100%;
+    }
+
+    .div-container__item {
+        width: 100%;
+    }
+
+    .div-container:nth-of-type(1) {
+        top: 0;
+    }
+
+    .div-container:nth-of-type(2) {
+        top: 173px;
+        left: 0;
+    }
+
+    .div-container:nth-of-type(3) {
+        top: 326px;
+        left: 0;
+    }
+    .div-container:nth-of-type(4) {
+        top: 481px;
+        left: 0;
+    }
+
+    .divs_shorts {
+        height: 316px;
+    }
+
+    .div-container-shorts {
+        height: 316px;
+    }
+
+    .div-container-shorts:nth-of-type(1) {
+        left: 0;
+        top: 0;
+    }
+
+    .div-container-shorts:nth-of-type(2) {
+        left: 90px;
+        top: 0;
+    }
+
+    .div-container-shorts:nth-of-type(3) {
+        left: 190px;
+        top: 0;
+    }
+
+    .div-container-shorts:nth-of-type(4) {
+        display: none;
+    }
+
     .cases-page-item__right {
         flex-direction: column;
+    }
+
+    .cases-page-item__right-top {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .cases-page-item__right-top-logo {
+        width: auto;
     }
 
     .cases-page-item__right-bottom {

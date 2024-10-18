@@ -43,10 +43,19 @@ export const CasesPageItem = ({
         <div className={styles['cases-page-item']}>
             <div>
                 <h1 className={styles['cases-page-item__header']}>{title}</h1>
-                <div className={styles.divs}>
+                <div
+                    className={
+                        isShorts
+                            ? styles['divs_shorts']
+                            : cn(styles.divs, {
+                                  [styles['divs-1']]: imageLinks.length === 1,
+                                  [styles['divs-2']]: imageLinks.length === 2,
+                                  [styles['divs-4']]: imageLinks.length === 4,
+                              })
+                    }>
                     {imageLinks.map((imageLink) =>
                         isShorts ? (
-                            <div className={styles['div-container-shorts']}>
+                            <div key={imageLink} className={styles['div-container-shorts']}>
                                 <Image src={imageLink} className={styles['div-container-shorts__item']} />
                             </div>
                         ) : (

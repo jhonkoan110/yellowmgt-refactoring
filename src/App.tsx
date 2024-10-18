@@ -7,7 +7,7 @@ import { Loader } from 'components/loader';
 
 const MainPage = lazy(() => import('pages/main-page'));
 const CasesPage = lazy(() => import('pages/cases-page'));
-const ConcreteCasePage = lazy(() => import('pages/concrete-case-page'));
+// const ConcreteCasePage = lazy(() => import('pages/concrete-case-page'));
 const ContactUsPage = lazy(() => import('pages/contact-us-page'));
 
 export const App = () => {
@@ -29,7 +29,7 @@ export const App = () => {
                         <Routes>
                             <Route path="/" element={<MainPage />} />
                             <Route path="/cases" element={<CasesPage />} />
-                            <Route path="/cases/:id" element={<ConcreteCasePage />} />
+                            {/* <Route path="/cases/:id" element={<ConcreteCasePage />} /> */}
                             <Route path="/contact_us" element={<ContactUsPage />} />
                         </Routes>
                     </Suspense>

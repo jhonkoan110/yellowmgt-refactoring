@@ -7,9 +7,10 @@ import { Button } from 'components/button';
 import { HashLink } from 'react-router-hash-link';
 import { NavLink } from 'react-router-dom';
 
-import styles from './app-header.module.css';
 import { scrollToTop } from 'utils/scroll-to-top';
 import { MobileMenu } from './mobile-menu';
+
+import styles from './app-header.module.css';
 
 export const AppHeader = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
